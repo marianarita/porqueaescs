@@ -267,7 +267,7 @@ input[type="button"]:hover, input[type="submit"]:hover {
 .button--cta:hover {
     background: var(--color-blue-light);
     border: 2px solid var(--color-blue-light);
-    color: var(--color-blue-light);
+    color: var(--color-white);
     -webkit-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
