@@ -1,74 +1,83 @@
-<?php
-
-$connection = mysqli_connect('localhost','root','','porqueaescs');
-mysqli_set_charset($connection,'utf8');
-$results = $_POST;
-$data = $_POST;
-
-
-if (!isset($_SESSION)) {
-    session_start();
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $_SESSION['postdata'] = $_POST;
-    unset($_POST);
-    header("Location: ".$_SERVER['PHP_SELF']);
-    exit;
-}
-
-$query = "INSERT INTO `form_records` (`record_id`, `question_id`, `answer_id`) VALUES ";
-
-foreach ($data as $key => $value) {
-//echo($key);
-if(is_array($value)){
-$str = json_encode($value);
-$str = preg_replace('/\[|\]/m',"", $str);
-// echo($str);
-$value = $str;
-}else{
-// echo($value);
-}
-
-//echo("<br>"); 
-
-$query = $query. ",(NULL, '$key', '$value')";
-
-
-};
-
-$query = str_replace(" VALUES ,"," VALUES ",$query);
-
-$query = $query . ";";
-print_r($_POST);
-
-
-mysqli_query ($connection, $query);
-
-?>
-
-
-
-<!DOCTYPE html>
+<?php 
+require('form-handler.php');
+?><!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>
-        New page
-    </title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--CSS -->
     <link href="css/main.css" rel="stylesheet">
+	<title>
+		Porquê a ESCS - Questionário
+    </title>
+    <meta content="Este estudo tem como objectivo a representação visual de um inquérito feito a alunos e ex alunos sobre quais os motivos que os levaram a escolher a ESCS."
+	 name="description">
+    <!-- FAVICON -->
+	<link href="media/favicon/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+	<link href="media/favicon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+	<link href="media/favicon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+	<link href="media/favicon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+	<link href="media/favicon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+	<link href="media/favicon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+	<link href="media/favicon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+	<link href="media/favicon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+	<link href="media/favicon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+	<link href="media/favicon/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+	<link href="media/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+	<link href="media/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+	<link href="media/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+	<link href="media/favicon/manifest.json" rel="manifest">
+	<meta content="#39b080" name="msapplication-TileColor">
+    <meta content="media/favicon/ms-icon-144x144.png" name="msapplication-TileImage">
+    <!-- BROWSER TOOLBAR COLOR // CHROME ANDROID -->
+    <meta content="#39b080" name="theme-color">
+    <!-- FACEBOOK -->
+    <meta content=" Porquê a ESCS - Questionário" property="og:title">
+    <meta content="link" property="og:image">
+    <meta content="Este estudo tem como objectivo a representação visual de um inquérito feito a alunos e ex alunos sobre quais os motivos que os levaram a escolher a ESCS."
+     property="og:description">
+     <meta content="website" property="og:type">
+    <!-- TWITTER -->
+    <meta content=" Porquê a ESCS - Questionário" name="twitter:title">
+    <meta content="link" name="twitter:image">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="Este estudo tem como objectivo a representação visual de um inquérito feito a alunos e ex alunos sobre quais os motivos que os levaram a escolher a ESCS."
+	 name="twitter:description">
+    <style>
+	
+	</style>
 </head>
 
 <body>
     <div id="progress-bar"></div>
+    <section class="_2col center-align home" id="home">
+			<div class="section__header">
+				<img class="section__header__image" src="img/logo-01.svg">
+				<div class="line line--horizontal"></div>
+				<div class="line line--vertical"></div>
+				<h1 class="big-title">Porquê a</h1>
+				<h1 class="section__header--bigger">ESCS?</h1>
+				<a class="button--cta">Responder ao questionário</a>
+			</div>
+			<div class="section__text">
+				<div class="section__text__quote">
+					<p>"Somos uma instituição cada vez mais comprometida e atenta às dinâmicas da academia, do mundo
+						empresarial e da sociedade. Somos reconhecidos pela qualidade do ensino, pela experiência da
+						aprendizagem, pelo rigor académico e pela reputação dos nossos diplomados e docentes. ”</p>
 
+				</div>
+			</div>
+        </section>
+        <div class="form-wrapper">
     <form id="form" method="post">
         <div class="form-section" id="name">
             <div class="filler"></div>
             <h1>
                 Antes de começares, qual é o teu nome?
-            </h1><input class="name-input" placeholder="Escreve aqui o teu nome" type="text"> <input class="input" type="button"
+            </h1>
+            <input class="name-input" placeholder="Escreve aqui o teu nome" type="text">
+            <input class="next" type="button"
                 value="Seguinte">
         </div>
         <div class="form-section" id="Q1">
@@ -93,7 +102,7 @@ mysqli_query ($connection, $query);
                     </label>
                 </div>
             </div>
-            <input class="input" type="button" value="Seguinte">
+            <input class="next" type="button" value="Seguinte">
         </div>
         <div class="form-section" id="Q2">
             <h1>
@@ -101,14 +110,15 @@ mysqli_query ($connection, $query);
             </h1>
             <p>
                 <span class="name">_ _ _ _ _ _ _ _ _ _</span>, quantos anos tens?
-            </p><input name="Q2" placeholder="A tua idade"> <input class="input" type="button" value="Seguinte">
+            </p><input name="Q2" placeholder="A tua idade"> <input class="next" type="button" value="Seguinte">
         </div>
         <div class="form-section" id="Q3">
             <h1>
                 Qual foi o teu último curso/formação na ESCS?
             </h1>
             <p>
-                Se fizeste mais do que um curso, indica o último.
+               Indica o que estás a frequentar. Se já fizeste mais do que um curso e não estás em nenhum, indica o último.
+</p>
                 <div class="_2col">
                     <div>
                         <div>
@@ -171,7 +181,7 @@ mysqli_query ($connection, $query);
                             em Storytelling</label>
                     </div>
                 </div>
-                    <input class="input" type="button" value="Seguinte">
+                    <input class="next" type="button" value="Seguinte">
                 </div>
                 <div class="form-section" id="Q4">
                     <h1>
@@ -182,32 +192,32 @@ mysqli_query ($connection, $query);
                     </p>
 
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_ESCS_1" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_1"><label
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_ESCS_1" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_1"><label
                             class="general-checkbox-custom-label" for="ESCOLHA_ESCS_1">Localização</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_ESCS_2" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_2"><label
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_ESCS_2" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_2"><label
                             class="general-checkbox-custom-label" for="ESCOLHA_ESCS_2">Prestígio</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_ESCS_3" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_3"><label
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_ESCS_3" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_3"><label
                             class="general-checkbox-custom-label" for="ESCOLHA_ESCS_3">Custos mais reduzidos</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_ESCS_4" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_4"><label
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_ESCS_4" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_4"><label
                             class="general-checkbox-custom-label" for="ESCOLHA_ESCS_4">Possibilidade de trabalhar e
                             estudar</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_ESCS_5" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_5"><label
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_ESCS_5" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_5"><label
                             class="general-checkbox-custom-label" for="ESCOLHA_ESCS_5">Qualidade da vida académica e
                             convívio</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_ESCS_6" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_6"><label
+                        <input class="general-checkbox-custom disable" id="ESCOLHA_ESCS_6" name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_6"><label
                             class="general-checkbox-custom-label" for="ESCOLHA_ESCS_6">Nenhum dos anteriores</label>
                     </div>
-                    <input class="input" type="button" value="Seguinte">
+                    <input class="next" type="button" value="Seguinte">
 
                 </div>
                 <div class="form-section" id="Q5">
@@ -218,35 +228,37 @@ mysqli_query ($connection, $query);
                         Escolhe todas as opções que se aplicam.
                     </p>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_CURSO_1" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_1"><label
-                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_1">Localização</label>
+                        <input class="general-checkbox-custom  disabled" id="ESCOLHA_CURSO_1" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_1"><label
+                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_1">O curso tem saídas profissionais.</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_CURSO_2" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_2"><label
-                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_2">Prestígio</label>
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_CURSO_2" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_2"><label
+                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_2">Vocação, gosto pelas matérias.</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_CURSO_3" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_3"><label
-                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_3">Custos mais reduzidos</label>
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_CURSO_3" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_3"><label
+                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_3">Boa empregabilidade dos diplomados</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_CURSO_4" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_4"><label
-                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_4">Possibilidade de trabalhar e
-                            estudar</label>
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_CURSO_4" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_4"><label
+                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_4">O curso tem uma boa componente prática</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_CURSO_5" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_5"><label
-                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_5">Qualidade da vida académica e
-                            convívio</label>
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_CURSO_5" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_5"><label
+                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_5">Médias de entrada acessíveis</label>
                     </div>
                     <div>
-                        <input class="general-checkbox-custom" id="ESCOLHA_CURSO_6" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_6"><label
-                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_6">Nenhum dos anteriores</label>
+                        <input class="general-checkbox-custom disabled" id="ESCOLHA_CURSO_6" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_6"><label
+                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_6">Sem média de entrada noutro curso</label>
                     </div>
-                    <input class="input" type="button" value="Seguinte">
+                    <div>
+                        <input class="general-checkbox-custom disable" id="ESCOLHA_CURSO_7" name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_7"><label
+                            class="general-checkbox-custom-label" for="ESCOLHA_CURSO_7">Nenhum dos anteriores</label>
+                    </div>
+                    <input class="next" type="button" value="Seguinte">
 
                 </div>
-                <div class="form-section" id="Q6">
+                <div class="form-section no-padding" id="Q6">
                     <h1>
                         Qualidades da ESCS
                     </h1>
@@ -263,7 +275,7 @@ mysqli_query ($connection, $query);
                                     do estabelecimento</label></div>
                             <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="QUALIDADES_ESCS_3"
                                     value="QUALIDADES_ESCS_3"><label for="QUALIDADES_ESCS_3" class="general-checkbox-custom-label">Boas
-                                    infraestrururas (salas de aula e apoio didático)</label></div>
+                                    infraestruturas (salas de aula e apoio didático)</label></div>
                             <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="QUALIDADES_ESCS_4"
                                     value="QUALIDADES_ESCS_4"><label for="QUALIDADES_ESCS_4" class="general-checkbox-custom-label">Boa
                                     biblioteca</label></div>
@@ -311,18 +323,34 @@ mysqli_query ($connection, $query);
                                     administrativo</label></div>
                             <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="QUALIDADES_ESCS_18"
                                     value="QUALIDADES_ESCS_18"><label for="QUALIDADES_ESCS_18" class="general-checkbox-custom-label">Apoio
-                                    em ntercâmbios com o estrangeiro</label></div>
+                                    em intercâmbios com o estrangeiro</label></div>
                             <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="QUALIDADES_ESCS_19"
                                     value="QUALIDADES_ESCS_19"><label for="QUALIDADES_ESCS_19" class="general-checkbox-custom-label">Uma
                                     boa associação de estudantes</label></div>
                         </div>
 
-                        <input class="input" type="submit" value="Submeter">
+                        <input class="next" type="button" value="Seguinte">
 
                     </div>
-            </p>
+                <div class="form-section final">
+                <h1>
+                <span class="name">_ _ _ _ _ _ _ _ _ _</span>, antes de submeteres:
+                    </h1>
+                    <p>
+                       Obrigada por teres preenchido o formulário.
+                       <br> Podes submeter ou rever os dados que preencheste.</p>
+                       <div>
+                       <input type="submit" class="submit" value="Submeter">
+                       <input type="button" class="review" value="Rever">
+</div>                    
+
+                </div>
         </div>
     </form>
+</div>
+<script src="js/jwerty.js">
+    </script>
+
     <script src="js/jquery.js">
     </script>
     <script src="js/main.js">

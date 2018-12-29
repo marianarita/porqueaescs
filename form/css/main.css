@@ -1,6 +1,7 @@
 /*
 * 
-* PORQUE A ESCS 
+* PORQUE A ESCS
+* FORMULARIO // CSS
 * Trabalho para a Cadeira de Laboratorio de Aplicacoes Interativas 
 * Feito por:
 * Edite Fernandes, no 9939 
@@ -138,12 +139,13 @@ table {
     vertical-align: baseline;
     text-decoration: none;
     scroll-behavior: smooth;
-    transition: all .5s ease-in-out;
+    /*transition: all .5s ease-in-out;*/
 }
 
-body {
+body, html {
     font-size: 16px;
-    background-color: var(--color-blue-darker)
+    background-color: var(--color-blue-darker);
+    overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -180,41 +182,11 @@ p {
 
 .filler {
     width: 100%;
-    height: 25vh;
+    height: 10vh;
     max-width: 100%;
 }
 
 /*=====  End of GENERAL STYLING  ======*/
-
-/*=============================================
-=                     FORM                    =
-=============================================*/
-
-form {
-    min-height: 999px;
-    width: 70%;
-    margin: 0 auto;
-    max-height: 100%;
-}
-
-.form-section {
-    padding: 40px 0;
-    opacity: .2;
-    height: min-content;
-}
-
-.form-section:first-child {
-    opacity: 1;
-}
-
-/*----------  PEQUENA GRELHA  ----------*/
-
-._2col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-/*=====  End of FORM  ======*/
 
 /*=============================================
 =           INPUTS GENERAL STYLING            =
@@ -236,25 +208,264 @@ input, input[type="text"] {
 input[type="button"], input[type="submit"] {
     font-size: 16px;
     font-weight: 400;
-    color: var(--color-blue-light);
-    border: 2px solid var(--color-blue-light);
+    /*color: var(--color-blue-light);
+    border: 2px solid var(--color-blue-light);*/
     cursor: pointer;
     padding: 10px 20px;
     width: auto;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    display: block;
+    letter-spacing: 0.05rem;
+    /*display: block;*/
     margin: 20px 0px;
+    width: -webkit-min-content;
+    width: -moz-min-content;
     width: min-content;
 }
 
 input[type="button"]:hover, input[type="submit"]:hover {
-    background-color: var(--color-blue-light);
-    color: #f7f7f7;
+    /* background-color: var(--color-blue-light); */
+    color: white;
 }
 
 /*=====  End of INPUTS GENERAL STYLING  ======*/
+
+/*=============================================
+=                BUTTONS & CTA                =
+=============================================*/
+
+.next {
+    border: 2px solid var(--color-blue-light);
+    color: var(--color-blue-light);
+    background-color: transparent;
+}
+
+.next:hover {
+    background-color: var(--color-blue-light);
+    color: var(--color-white);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.button--cta {
+    padding: 15px;
+    background: transparent;
+    border: 2px solid var(--color-blue-light);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 1.1rem;
+    color: var(--color-blue-light);
+    font-family: var(--font-secondary);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.button--cta:hover {
+    background: var(--color-blue-light);
+    border: 2px solid var(--color-blue-light);
+    color: var(--color-blue-light);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.submit {
+    border: 2px solid var(--color-red);
+    color: var(--color-red);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.submit:hover {
+    display: inline-block;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.review {
+    border: 2px solid var(--color-yellow);
+    color: var(--color-yellow);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    display: inline-block;
+}
+
+.review:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+/*=====  End of BUTTONS & CTA  ======*/
+
+/*=============================================
+=               SLIDER INICIAL                =
+=============================================*/
+
+section {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.center-align {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-items: center;
+    /* height: 80%; */
+    position: relative;
+    /* max-width: 100%; */
+    background-color: var(--color-blue-darker);
+    position: absolute;
+    z-index: 1;
+}
+
+.section__header {
+    position: relative;
+    justify-self: flex-end;
+    padding: 80px;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+/* "PORQUE A" */
+
+.big-title {
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 0;
+    z-index: 99;
+}
+
+/* "ESCS" */
+
+h1.section__header--bigger {
+    font-size: 10rem;
+    font-weight: bold;
+    margin: 0;
+    z-index: 99;
+}
+
+/* PEQUENA QUOTE */
+
+.section__text {
+    /* display: grid; */
+    position: relative;
+    justify-self: flex-start;
+    width: 100%;
+}
+
+.section__text__quote {
+    padding: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section__text__quote p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* LINHAS DO LADO DO TITULO */
+
+.line--horizontal {
+    height: 2px;
+    width: 40%;
+    background-color: var(--color-blue-light);
+    position: absolute;
+    bottom: 0;
+}
+
+.line--vertical {
+    height: 25%;
+    width: 2px;
+    background-color: var(--color-blue-light);
+    position: absolute;
+    right: 0;
+    bottom: 30%;
+}
+
+/* LOGO DA ESCS NO FUNDO */
+
+img.section__header__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    opacity: .2;
+    z-index: -1;
+}
+
+/*=====  End of SLIDER INICIAL  ======*/
+
+/*=============================================
+=                     FORM                    =
+=============================================*/
+
+.form-wrapper {
+    display: none;
+    position: absolute;
+}
+
+form {
+    min-height: 999px;
+    width: 70%;
+    margin: 0 auto;
+    max-height: 100%;
+    /* z-index: 2; */
+}
+
+.form-section {
+    padding-top: 20vh;
+    /* padding: 40px 0; */
+    opacity: .2;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+}
+
+.form-section:first-child {
+    opacity: 1;
+}
+
+.final {
+    /* width: 100vw; */
+    /* height: 100vh; */
+    display: -ms-grid;
+    display: grid;
+    padding: 30vh 0vh;
+}
+
+.no-padding {
+    padding-top: 10vh;
+    /* padding: 10vh; */
+}
+
+/*----------  PEQUENA GRELHA  ----------*/
+
+._2col {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*=====  End of FORM  ======*/
 
 /*=============================================
 =            RADIO SELECT GENERO              =
@@ -262,6 +473,7 @@ input[type="button"]:hover, input[type="submit"]:hover {
 
 .form-gender-wrapper {
     display: inline-block;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 150px;
     margin: 20px 1% 20px 0;
@@ -272,6 +484,7 @@ input[type="button"]:hover, input[type="submit"]:hover {
 }
 
 .gender-radio-label {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
     height: 100%;
@@ -297,7 +510,12 @@ input[type="button"]:hover, input[type="submit"]:hover {
 
 .gender-radio-label img {
     max-height: 100%;
+    -webkit-filter: invert(100%);
     filter: invert(100%);
+}
+
+.gender-radio-label p {
+    margin: 10px;
 }
 
 /*=====  End of RADIO SELECT GENERO  ======*/
@@ -308,6 +526,8 @@ input[type="button"]:hover, input[type="submit"]:hover {
 
 .curso-input input {
     display: inline-block;
+    width: -webkit-min-content;
+    width: -moz-min-content;
     width: min-content;
 }
 
@@ -324,6 +544,8 @@ input[type="button"]:hover, input[type="submit"]:hover {
 .general-checkbox-custom, .general-radio-input {
     opacity: 0;
     position: absolute;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
 
@@ -332,6 +554,8 @@ input[type="button"]:hover, input[type="submit"]:hover {
     vertical-align: middle;
     margin: 5px;
     cursor: pointer;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 
@@ -354,20 +578,50 @@ input[type="button"]:hover, input[type="submit"]:hover {
 
 .general-checkbox-custom:checked+.general-checkbox-custom-label:before {
     background: var(--color-blue-light);
+    -webkit-box-shadow: inset 0px 0px 0px 4px var(--color-blue-darker);
     box-shadow: inset 0px 0px 0px 4px var(--color-blue-darker);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+    -webkit-transition: -webkit-box-shadow .3s .001s;
+    transition: -webkit-box-shadow .3s .001s;
+    -o-transition: box-shadow .3s .001s;
     transition: box-shadow .3s .001s;
+    transition: box-shadow .3s .001s, -webkit-box-shadow .3s .001s;
 }
 
 .general-radio-input+.general-radio-input-label:before {
+    -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 
 .general-radio-input:checked+.general-radio-input-label:before {
     background: var(--color-blue-light);
+    -webkit-box-shadow: inset 0px 0px 0px 4px var(--color-blue-darker);
     box-shadow: inset 0px 0px 0px 4px var(--color-blue-darker);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+    -webkit-transition: -webkit-box-shadow .3s .001s;
+    transition: -webkit-box-shadow .3s .001s;
+    -o-transition: box-shadow .3s .001s;
     transition: box-shadow .3s .001s;
+    transition: box-shadow .3s .001s, -webkit-box-shadow .3s .001s;
+}
+
+.general-checkbox-custom:disabled+.general-checkbox-custom-label:before {
+    border: 2px solid var(--color-gray-dark);
+    background: var(--color-gray-dark);
+    -webkit-box-shadow: inset 0px 0px 0px 4px var(--color-blue-darker);
+    box-shadow: inset 0px 0px 0px 4px var(--color-blue-darker);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transition: -webkit-box-shadow .3s .001s;
+    transition: -webkit-box-shadow .3s .001s;
+    -o-transition: box-shadow .3s .001s;
+    transition: box-shadow .3s .001s;
+    transition: box-shadow .3s .001s, -webkit-box-shadow .3s .001s;
 }
 
 /*=====  End of GENERAL RADIO & CHECKBOX  ======*/
