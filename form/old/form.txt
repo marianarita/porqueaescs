@@ -1,0 +1,99 @@
+	<form action="" method="post">
+			<div class="form--section">
+				<h1 class="section__header">
+					Dados Sóciodemográficos php
+				</h1>
+				<div class="subsection --center-align">
+					<div class="subsection__module">
+						<h2 class="subsection__module__header">
+							Género
+						</h2><input name="Q1" type="radio" value="Masculino"><br>
+						<input name="Q1" type="radio" value="Feminino"><br>
+					</div>
+				</div>
+				<div class="subsection  --center-align">
+					<div class="subsection__module">
+						<h2 class="subsection__module__header">
+							Idade
+						</h2><input name="Q2" placeholder="idade" type="number"><br>
+					</div>
+				</div>
+				<div class="subsection  --center-align">
+					<div class="subsection__module">
+						<h2 class="subsection__module__header">
+							Curso ou última formação na ESCS
+						</h2><input name="Q3" type="radio" value="CURSO_1">Licenciatura AM<br>
+						<input name="Q3" type="radio" value="CURSO_2">Licenciatura JORN<br>
+						<input name="Q3" type="radio" value="CURSO_3">Licenciatura RPCE<br>
+						<input name="Q3" type="radio" value="CURSO_4">Licenciatura PM<br>
+						<input name="Q3" type="radio" value="CURSO_5">Mestrado AM<br>
+						<input name="Q3" type="radio" value="CURSO_6">Mestrado JORN<br>
+						<input name="Q3" type="radio" value="CURSO_7">Mestrado PM<br>
+						<input name="Q3" type="radio" value="CURSO_8">Mestrado GERP<br>
+						<input name="Q3" type="radio" value="CURSO_9">Pós-Graduação em Branding e Content Marketing<br>
+						<input name="Q3" type="radio" value="CURSO_10">Pós-Graduação em Indústrias e Culturas Criativas: Gestão e Estratégias<br>
+						<input name="Q3" type="radio" value="CURSO_11">Pós-Graduação em Storytelling<br>
+					</div>
+				</div>
+			</div>
+			<div class="form--section">
+				<h1 class="section__header">
+					Porquê a ESCS
+				</h1>
+				<div class="subsection">
+					<div class="subsection__module">
+						<h2 class="subsection__module__header">
+							Porque escolheste estudar na ESCS?
+						</h2><input name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_1">Localização<br>
+						<input name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_2">Prestígio<br>
+						<input name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_3">Custos mais reduzidos<br>
+						<input name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_4">Possibilidade de trabalhar e estudar<br>
+						<input name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_5">Qualidade da vida académica e convívio<br>
+						<input name="Q4[]" type="checkbox" value="ESCOLHA_ESCS_6">Nenhum dos anteriores<br>
+					</div>
+				</div>
+				<div class="subsection">
+					<div class="subsection__module">
+						<h2 class="subsection__module__header">
+							Porque escolheste o curso que identificaste acima?
+						</h2><input name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_1">O curso tem saídas profissionais<br>
+						<input name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_2">Vocação, gosto pelas matérias<br>
+						<input name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_3">Boa empregabilidade dos diplomados<br>
+						<input name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_4">O curso tem uma boa componente prática<br>
+						<input name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_5">Médias de entrada acessíveis<br>
+						<input name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_6">Sem média de entrada noutro curso<br>
+						<input name="Q5[]" type="checkbox" value="ESCOLHA_CURSO_7">Nenhum dos anteriores<br>
+					</div>
+				</div>
+				<div class="subsection">
+					<div class="subsection__module">
+						<h2 class="subsection__module__header">
+							Indica no máximo, 3 qualidades da ESCS
+						</h2><input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_1">Bons rpofessores<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_2">Prestígio do estabelecimento<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_3">Boas infraestrururas (salas de aula e apoio didático)<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_4">Boa biblioteca<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_5">Bons meios informáticos<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_6">Localização (facilidade de transporte)<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_7">Garantia de saídas profissionais<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_8">Médias de entrada elevadas<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_9">Elevado sucesso escolar da instituição<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_10">qualidade dos currículos dos cursos<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_11">Atividade de investigação científica<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_12">Atividades extracurriculares<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_13">Boa organização geral<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_14">Estruturas de desporto e lazer<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_15">Zona de refeições<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_16">Serviços médicos e sociais<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_17">Apoio administrativo<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_18">Apoio em ntercâmbios com o estrangeiro<br>
+						<input name="Q6[]" type="checkbox" value="QUALIDADES_ESCS_19">Uma boa associação de estudantes<br>
+					</div>
+				</div>
+			</div>
+			<div class="form--section">
+				<div class="subsection--formcontrols">
+					<input type="submit" value="Submit"> <input type="submit" value="Reset">
+				</div>
+			</div>
+		</form>

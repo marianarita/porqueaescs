@@ -1,0 +1,373 @@
+/*
+* 
+* PORQUE A ESCS 
+* Trabalho para a Cadeira de Laboratorio de Aplicacoes Interativas 
+* Feito por:
+* Edite Fernandes, no 9939 
+* Filipa Ribeiro, no 9987 
+* Mariana Rita, no 9972 
+* 
+*/
+
+/*=============================================
+=                    FONTES                   =
+=============================================*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.eot');
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold.ttf') format('truetype'), url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Medium.woff2') format('woff2'), url('../fonts/Roboto-Medium.woff') format('woff'), url('../fonts/Roboto-Medium.ttf') format('truetype'), url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.eot');
+    src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Light.woff2') format('woff2'), url('../fonts/Roboto-Light.woff') format('woff'), url('../fonts/Roboto-Light.ttf') format('truetype'), url('../fonts/Roboto-Light.svg#Roboto-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Bold.eot');
+    src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url('../fonts/RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'), url('../fonts/RobotoCondensed-Bold.woff') format('woff'), url('../fonts/RobotoCondensed-Bold.ttf') format('truetype'), url('../fonts/RobotoCondensed-Bold.svg#RobotoCondensed-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Regular.eot');
+    src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url('../fonts/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff'), url('../fonts/RobotoCondensed-Regular.ttf') format('truetype'), url('../fonts/RobotoCondensed-Regular.svg#RobotoCondensed-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Light.eot');
+    src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url('../fonts/RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoCondensed-Light.woff2') format('woff2'), url('../fonts/RobotoCondensed-Light.woff') format('woff'), url('../fonts/RobotoCondensed-Light.ttf') format('truetype'), url('../fonts/RobotoCondensed-Light.svg#RobotoCondensed-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*=====  End of FONTES  ======*/
+
+/*=============================================
+=                  VARIAVEIS                  =
+=============================================*/
+
+:root {
+    --color-yellow: #e9a60d;
+    --color-red: #be1428;
+    --color-blue-light: #3caab4;
+    --color-blue: #007382;
+    --color-blue-dark: #005564;
+    --color-blue-darker: #101719;
+    --color-white: #fff;
+    --color-gray-light: #e7e7e7;
+    --color-gray: #595a5c;
+    --color-gray-dark: #3c3c3b;
+    --color--black: #000;
+    --font-primary: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --font-secondary: 'Roboto Condensed', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*=====  End of VARIAVEIS  ======*/
+
+/*=============================================
+=                    RESET                    =
+=============================================*/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*=====  End of RESET  ======*/
+
+/*=============================================
+=               GENERAL STYLING               =
+=============================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: all .5s ease-in-out;
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--color-blue-darker)
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    margin: 20px 0px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--color-blue-light)
+}
+
+p, label {
+    font-family: var(--font-secondary);
+    font-size: 1.3rem;
+    color: var(--color-white);
+    font-weight: 300;
+    opacity: 1;
+    line-height: 1.5rem;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+#progress-bar {
+    position: fixed;
+    height: 0%;
+    width: 10px;
+    background: var(--color-blue);
+    z-index: 99;
+    right: 0;
+}
+
+.filler {
+    width: 100%;
+    height: 25vh;
+    max-width: 100%;
+}
+
+/*=====  End of GENERAL STYLING  ======*/
+
+/*=============================================
+=                     FORM                    =
+=============================================*/
+
+form {
+    min-height: 999px;
+    width: 70%;
+    margin: 0 auto;
+    max-height: 100%;
+}
+
+.form-section {
+    padding: 40px 0;
+    opacity: .2;
+    height: min-content;
+}
+
+.form-section:first-child {
+    opacity: 1;
+}
+
+/*----------  PEQUENA GRELHA  ----------*/
+
+._2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*=====  End of FORM  ======*/
+
+/*=============================================
+=           INPUTS GENERAL STYLING            =
+=============================================*/
+
+input, input[type="text"] {
+    background: transparent;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 2px solid var(--color-blue-light);
+    font-family: var(--font-secondary);
+    width: 100%;
+    display: inline-block;
+    font-weight: 300;
+}
+
+input[type="button"], input[type="submit"] {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-light);
+    border: 2px solid var(--color-blue-light);
+    cursor: pointer;
+    padding: 10px 20px;
+    width: auto;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin: 20px 0px;
+    width: min-content;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: var(--color-blue-light);
+    color: #f7f7f7;
+}
+
+/*=====  End of INPUTS GENERAL STYLING  ======*/
+
+/*=============================================
+=            RADIO SELECT GENERO              =
+=============================================*/
+
+.form-gender-wrapper {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 150px;
+    margin: 20px 1% 20px 0;
+    height: 200px;
+    vertical-align: top;
+    font-size: 22px;
+    text-align: center;
+}
+
+.gender-radio-label {
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 10px 10px 30px 10px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.gender-radio-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.gender-radio-input:hover~.gender-radio-label {
+    background-color: var(--color-blue-light);
+}
+
+.gender-radio-input:checked~.gender-radio-label {
+    opacity: 1;
+}
+
+.gender-radio-label img {
+    max-height: 100%;
+    filter: invert(100%);
+}
+
+/*=====  End of RADIO SELECT GENERO  ======*/
+
+/*=============================================
+=             RADIO SELECT CURSO              =
+=============================================*/
+
+.curso-input input {
+    display: inline-block;
+    width: min-content;
+}
+
+.curso-input label {
+    DISPLAY: inline-block;
+}
+
+/*=====  End of RADIO CURSO  ======*/
+
+/*=============================================
+=           GENERAL RADIO & CHECKBOX          =
+=============================================*/
+
+.general-checkbox-custom, .general-radio-input {
+    opacity: 0;
+    position: absolute;
+    transition: all .5s ease-in-out;
+}
+
+.general-checkbox-custom, .general-checkbox-custom-label, .general-radio-input, .general-radio-input-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+    width: max-content;
+}
+
+.general-checkbox-custom-label, .general-radio-input-label {
+    position: relative;
+}
+
+.general-checkbox-custom+.general-checkbox-custom-label:before, .general-radio-input+.general-radio-input-label:before {
+    content: '';
+    background: transparent;
+    border: 2px solid var(--color-blue-light);
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.general-checkbox-custom:checked+.general-checkbox-custom-label:before {
+    background: var(--color-blue-light);
+    box-shadow: inset 0px 0px 0px 4px var(--color-blue-darker);
+    transition: all .5s ease-in-out;
+    transition: box-shadow .3s .001s;
+}
+
+.general-radio-input+.general-radio-input-label:before {
+    border-radius: 50%;
+}
+
+.general-radio-input:checked+.general-radio-input-label:before {
+    background: var(--color-blue-light);
+    box-shadow: inset 0px 0px 0px 4px var(--color-blue-darker);
+    transition: all .5s ease-in-out;
+    transition: box-shadow .3s .001s;
+}
+
+/*=====  End of GENERAL RADIO & CHECKBOX  ======*/
