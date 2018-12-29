@@ -155,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 1.5rem;
-    color: var(--color-blue-light)
+    color: var(--color-white);
 }
 
 p, label {
@@ -346,7 +346,7 @@ section {
 
 .big-title {
     font-size: 6rem;
-    font-weight: bold;
+    font-weight: normal;
     margin: 0;
     z-index: 99;
 }
@@ -355,7 +355,7 @@ section {
 
 h1.section__header--bigger {
     font-size: 10rem;
-    font-weight: bold;
+    font-weight: normal;
     margin: 0;
     z-index: 99;
 }
