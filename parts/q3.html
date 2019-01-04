@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <script type="text/javascript" src=" https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src=" https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
+    <script type="text/javascript" src=" https://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+
+<body>
+    <div id="container" style="width: 75%;">
+        <canvas id="canvas"></canvas>
+        <script>
+            /* CHAMADA AJAX GUARDADA NUMA VAR*/
+            var results = $.ajax({
+                type: 'GET',
+                url: 'q3.php',
+                data: { variable: 'value' },
+                dataType: 'json',
+                async: false,
+            }).responseJSON;
+
+
+            /* PROCESSAMENTO DO OBJETO PARA FILTRAR ALGUNS RESULTADOS */
+            var labels = results.map(function (e) {
+                return e.answer_text;
+            });
+            var data = results.map(function (e) {
+                return e.answer_value;
+            });
+
+            /* CONFIGS DO GRAFICO */
+            var config = {
+                type: 'horizontalBar',
+                data: {
+                    datasets: [{
+                        label: 'respostas',
+                        data: data,
+                        backgroundColor: 'rgba(0, 119, 204, 0.3)',
+                    }],
+                    labels: labels,
+                },
+                options: {
+                        // Elements options apply to all of the options unless overridden in a dataset
+                        // In this case, we are setting the border of each horizontal bar to be 2px wide
+                        elements: {
+                            rectangle: {
+                                borderWidth: 2,
+                            }
+                        },
+                        responsive: true,
+                        legend: {
+                            position: 'right',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Escolhas'
+                        },
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    beginAtZero: true,
+                                    fixedStepSize: 1
+                                },
+                                
+                            }],
+                            yAxes: [{
+                                gridLines: {
+                                    display: false
+                                },
+                            }]
+                        }
+                    }
+            };
+
+            window.onload = function () {
+                var ctx =  $('#canvas')[0].getContext('2d');
+                window.myHorizontalBar = new Chart(ctx, config);
+            };
+        </script>
+
+</html>

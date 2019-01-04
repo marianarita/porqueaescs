@@ -1,6 +1,6 @@
 <?php
 
-$connection = mysqli_connect('localhost','root','','porqueaescs');
+$connection = mysqli_connect('localhost','root','','porqueaescs1');
 mysqli_set_charset($connection,'utf8');
 $results = $_POST;
 $data = $_POST;
@@ -55,7 +55,6 @@ mysqli_query ($connection, $query);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 
 <body>
@@ -151,7 +150,5 @@ mysqli_query ($connection, $query);
         </form>
     </section>
 </body>
-<script src="js/jquery.js"></script>
-<script src="js/main.js"></script>
 
 </html>

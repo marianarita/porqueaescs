@@ -33,9 +33,6 @@ $(window).on('scroll', function () {
 =============================================*/
 
 $('.next').on('click', function () {
-  /* RETIRA NOME DA PESSOA PARA USAR PELO FORM */
-  var name = $('.name-input').val();
-  $('.name').text(name);
   /* NAV ENTRE FORM SECTIONS */
   var $this = $(this).parent();
   $('html, body').animate({
@@ -53,10 +50,20 @@ $('.next').on('click', function () {
 =                 NOME CURSO                  =
 =============================================*/
 
-/* TIRAR NOME DO CURSO PELO DATA ATTRIBUTE PARA COLOCAR NA QUESTAO 5 */
+/* PERSONALIZAÇÃO DO FORM PELOS INPUTS */
 $('#form input').on('change', function () {
+  /* TIRAR NOME DO CURSO PELO DATA ATTRIBUTE PARA COLOCAR NA QUESTAO 5 */
   var curso = $('input[name=Q3]:checked', '#form').attr('data-curso');
   $('.curso').text(curso);
+
+  /* TIRAR NOME USER PELO TEXT INPUT PARA USAR AO LONGO DO FORM */
+  var name = $('.name-input').val();
+  if( !$('.name-input').val() ) {
+    $('.name').text('_ _ _ _ _ _ _ _ _ _ ');} else{
+      $('.name').text(name);
+
+    }
+
 });
 
 /*=====  End of TEXT INPUTS  ======*/
@@ -70,6 +77,12 @@ $('.button--cta').on('click', function () {
     $('.form-wrapper').fadeIn(600);
   });
 })
+
+$('.mobile-button--cta').on('click', function () {
+  $('.mobile-wrapper').fadeOut('600', function () {
+    $('.form-wrapper').fadeIn(600);
+  });
+})
 $('.review').on('click', function () {
   $('body, html').css('overflow', 'visible'),
     $('html, body').animate({
@@ -80,6 +93,7 @@ $('.review').on('click', function () {
       });
       $('#progress-bar').fadeOut(300);
       $('#name').fadeOut(300);
+      $('.filler').fadeOut(300);
     });
 });
 

@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <script type="text/javascript" src=" https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src=" https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
+    <script type="text/javascript" src=" https://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+
+<body>
+    <div id="container" style="width: 75%;">
+        <canvas id="canvas"></canvas>
+        <script>
+            /* CHAMADA AJAX GUARDADA NUMA VAR*/
+            var results = $.ajax({
+                type: 'GET',
+                url: 'q6.php',
+                data: { variable: 'value' },
+                dataType: 'json',
+                async: false,
+            }).responseJSON;
+
+
+            /* PROCESSAMENTO DO OBJETO PARA FILTRAR ALGUNS RESULTADOS */
+            var labels = results.map(function (e) {
+                return e.answer_text;
+            });
+            var data = results.map(function (e) {
+                return e.answer_value;
+            });
+
+            /* CONFIGS DO GRAFICO */
+            var config = {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: data,
+                        backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"],
+                    }],
+                    labels: labels,
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Chart.js Doughnut Chart'
+                    },
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    }
+                }
+            };
+
+            window.onload = function () {
+                var ctx =  $('#canvas')[0].getContext('2d');
+                window.myDoughnut = new Chart(ctx, config);
+            };
+        </script>
+
+</html>
