@@ -2,28 +2,242 @@
 <head>
 	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Porquê a ESCS?</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 <body>
-	<nav>
-		<a href="#" class="nav-item">Sobre</a>
-		<a href="#" class="nav-item">Resultados</a>
-		<a href="#" class="nav-item">Conclusões</a>
-		<a href="#" class="nav-item">Questionário</a>
-		<a href="#" class="nav-item">Sugestões</a>
+	<!-- TOP NAVBAR -->
+	<nav class="flex">
+		<div class="col-6 flex flex-baseline">
+			<img class="nav-logo" src="img/escs-nav.svg" alt="Logótipo ESCS">
+			<p class="nav-title">Porquê a ESCS?</p>
+		</div>
+		<div class="col-6 flex flex-baseline flex-justify-end">
+			<a href="#section-2" class="nav-item">Sobre</a>
+			<a href="#section-3" class="nav-item">Resultados</a>
+			<a href="#section-4" class="nav-item">Questionário</a>
+			<a href="#section-5" class="nav-item">Notícias</a>
+			<a href="#section-6" class="nav-item">Feedback</a>
+			<div class="nav-item"><img class="switch" src="img/switch.svg"></div>
+		</div>
 	</nav>
-	<section class="height-100 flex flex-center col-10 margin-center">
-		<div>
-			<h1>Porquê a ESCS?</h1>
-			<a href="#" class="btn">Explorar</a>
+
+	<!-- SIDE NAVIGATION -->
+	<div class="sidenav">
+		<div href="#section-1" class="sidenav-item sidenav-active">
+			<p class="sidenav-text">01</p>
+		</div>
+		<div href="#section-2" class="sidenav-item">
+			<p class="sidenav-text">02</p>
+		</div>
+		<div href="#section-3" class="sidenav-item">
+			<p class="sidenav-text">03</p>
+		</div>
+		<div href="#section-4" class="sidenav-item">
+			<p class="sidenav-text">04</p>
+		</div>
+		<div href="#section-5" class="sidenav-item">
+			<p class="sidenav-text">05</p>
+		</div>
+		<div href="#section-6" class="sidenav-item">
+			<p class="sidenav-text">06</p>
+		</div>
+	</div>
+
+	<!-- HOME -->
+	<section id="section-1" class="container flex flex-center">
+		<div class="col-2 col-lg-1 col-md-0"></div>
+		<div class="flex flex-end">
+			<div class="col-5 border-bottom-blue">
+				<h1>
+					Porquê a
+					<div class="border-right-blue text-large col-12">ESCS?</div>
+				</h1>
+				<div class="flex flex-justify-end">
+					<a href="#section-2" class="btn btn-hover-blue text-blue-light">Explorar</a>
+				</div>
+			</div>
+			<div class="col-5">
+				<p class="quote">
+					"Somos uma instituição cada vez mais comprometida e atenta às dinâmicas da academia, do mundo empresarial e da sociedade. Somos reconhecidos pela qualidade do ensino, pela experiência da aprendizagem, pelo rigor académico e pela reputação dos nossos diplomados e docentes.” <br>
+					<span class="text-blue">Presidente da ESCS, Prof. Doutor André Sendin (2018)</span>
+				</p>
+			</div>
 		</div>
 	</section>
-	<section class="col-10 margin-center">
-		<h2 class="border-red">Sobre este projecto</h2>
+
+	<!-- SOBRE -->
+	<section id="section-2" class="container flex flex-center">
+		<div class="col-1 col-lg-0"></div>
+		<div class="flex-direction-column col-12">
+			<div class="col-5 border-bottom-yellow">
+				<h1 class="flex-direction-column">
+					Sobre o 
+					<div class="border-right-yellow text-small uppercase">projecto</div>
+				</h1>
+			</div>
+			<div class="col-9">
+				<p class="condensed">
+					Este estudo tem como objectivo a representação visual de um inquérito feito a alunos e ex alunos sobre quais os motivos que os levaram a escolher a ESCS.
+					<br><br>
+					O formulário está em constante actualização, os dados são alterados em tempo real, com base nas respostas ao inquérito.
+				</p>
+				<div class="flex flex-justify-end">
+					<a href="#section-3" class="btn btn-hover-yellow text-yellow-light">Ver resultados</a>
+				</div>
+			</div>
+		</div>
 	</section>
+
+	<!-- RESULTADOS -->
+	<section id="section-3" class="container flex flex-baseline">
+		<div class="col-1 col-lg-0"></div>
+		<div class="flex-direction-column flex-self-stretch col-12 rel">
+			<!-- SLIDER FIXED ELEMENTS -->
+			<div class="flex flex-center col-12">
+				<div class="col-6 border-bottom-red">
+					<h1 class="border-right-red">A amostra</h1>
+				</div>
+				<div class="col-6">
+					<div class="slidernav flex">
+						<div class="slidernav-item slidernav-active">
+							<p class="slidernav-text">01</p>
+						</div>
+						<div class="slidernav-item">
+							<p class="slidernav-text"></p>
+						</div>
+						<div class="slidernav-item">
+							<p class="slidernav-text"></p>
+						</div>
+						<div class="slidernav-item">
+							<p class="slidernav-text"></p>
+						</div>
+						<div class="slidernav-item">
+							<p class="slidernav-text"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- SLIDER CONTENT -->
+				<!-- CONTENT 01 --> <!-- Deve ter position absolute e muda a opacidade na navegação-->
+				<div class="flex flex-baseline col-12">
+					<div class="col-6">
+						CLUSTER FORCE GRAPH
+					</div>
+					<div class="col-6">
+						<h2 class="uppercase">Género e Idade</h2>
+						<p class="col-8">
+							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. 
+							<br>
+	 						Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua infância.
+						</p>
+					</div>
+				</div>
+
+				<!-- CONTENT 02 -->
+				<div class="flex flex-baseline col-12">
+					<div class="col-6">
+						BAR GRAPH
+					</div>
+					<div class="col-6">
+						<h2 class="uppercase">Curso</h2>
+						<p class="col-8">
+							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. 
+							<br>
+	 						Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua infância.
+						</p>
+					</div>
+				</div>
+
+				<!-- CONTENT 03 -->
+				<div class="flex flex-baseline col-12">
+					<div class="col-6">
+						SPIDER CHART
+					</div>
+					<div class="col-6">
+						<h2 class="uppercase">Motivos de escolha do curso</h2>
+						<p class="col-8">
+							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. 
+							<br>
+	 						Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua infância.
+						</p>
+					</div>
+				</div>
+
+				<!-- CONTENT 04 -->
+				<div class="flex flex-baseline col-12">
+					<div class="col-6">
+						POLAR CHART
+					</div>
+					<div class="col-6">
+						<h2 class="uppercase">Motivos de escolha da ESCS</h2>
+						<p class="col-8">
+							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. 
+							<br>
+	 						Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua infância.
+						</p>
+					</div>
+				</div>
+
+				<!-- CONTENT 04 -->
+				<div class="flex flex-baseline col-12">
+					<div class="col-6">
+						DOUGHTNUT CHART
+					</div>
+					<div class="col-6">
+						<h2 class="uppercase">Características que deverão ser mais privilegiadas na ESCS</h2>
+						<p class="col-8">
+							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. 
+							<br>
+	 						Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua infância.
+						</p>
+					</div>
+				</div>
+
+			<!-- SLIDER FIXED ELEMENT -->
+			<div class="slider-next text-red-light">
+				Seguinte &#9656;
+			</div>
+		</div>
+	</section>
+
+
+	<!-- QUESTIONÁRIO -->
+	<section id="section-4" class="container flex flex-baseline">
+		<div class="col-1 col-lg-0"></div>
+		<div class="flex-direction-column flex-self-stretch col-12 rel">
+			<!-- SLIDER FIXED ELEMENTS -->
+			<div class="flex flex-center col-12">
+				<div class="col-6 border-bottom-yellow">
+					<h1>O questionário</h1>
+				</div>
+			</div>
+			<div class="flex flex-baseline col-12">
+				<div class="col-6 border-right-yellow">
+					<h3 class="col-10">
+						Estuda ou estudou na ESCS e não preencheu o formulário?
+						<br>
+						Ainda vai a tempo! :)
+					</h3>
+					<a href="#section-3" class="btn btn-hover-yellow text-yellow-light">Responder</a>
+				</div>
+				<div class="col-6">
+					<h4>
+						Perguntas feitas aos inquiridos:
+					<h4>
+					<p>
+						- Género<br>
+						- Idade<br>
+						- Naturalidade<br>
+						- Curso<br>
+						- Motivos de escolha do curso<br>
+						- Motivos de escolha da ESCS<br>
+						- As 3 características que, na opinião do inquirido, deverão ser mais privilegiadas na ESCS
+					</p>
+				</div>
+			</div>
 </body>
 <script src="js/jquery.js"></script>
 <script src="js/chart.js"></script>
