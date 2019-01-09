@@ -11,7 +11,7 @@ from
 `m_answer`
 left join `answer_list` on (`answer_list`.`answer_id` = `m_answer`.`answer_id`)
 WHERE
-`m_answer`.`question_id` IN ('Q4')
+`m_answer`.`question_id` IN ('Q5')
 group by
 `m_answer`.`answer_id`
 ORDER BY

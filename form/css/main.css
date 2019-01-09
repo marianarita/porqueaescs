@@ -79,6 +79,7 @@
 :root {
     --color-yellow: #e9a60d;
     --color-red: #be1428;
+    --color-green:#1dbe14;
     --color-blue-light: #3caab4;
     --color-blue: #007382;
     --color-blue-dark: #005564;
@@ -146,6 +147,7 @@ body, html {
     font-size: 16px;
     background-color: var(--color-blue-darker);
     overflow: hidden;
+    overflow-x: hidden !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -274,8 +276,8 @@ input[type="button"]:hover, input[type="submit"]:hover {
 }
 
 .submit {
-    border: 2px solid var(--color-red);
-    color: var(--color-red);
+    border: 2px solid var(--color-green);
+    color: var(--color-green);
     -webkit-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
@@ -283,7 +285,7 @@ input[type="button"]:hover, input[type="submit"]:hover {
 
 .submit:hover {
     display: inline-block;
-    background-color: var(--color-red);
+    background-color: var(--color-green);
     color: var(--color-white);
     -webkit-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;

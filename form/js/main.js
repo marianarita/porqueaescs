@@ -35,6 +35,7 @@ $(window).on('scroll', function () {
 $('.next').on('click', function () {
   /* NAV ENTRE FORM SECTIONS */
   var $this = $(this).parent();
+  //console.log($($this).parent());
   $('html, body').animate({
     scrollTop: $($this).next().offset().top
   }, 400, function () {
@@ -42,6 +43,23 @@ $('.next').on('click', function () {
       opacity: 1,
     }))
   });
+});
+
+
+/*$(function () {
+  $(document).keyup(function (e) {
+     alert(e.keyCode);
+  });
+});*/
+
+$('input').keydown(function (e) {
+  if (e.keyCode === 13 || e.keyCode === 9 ) {
+    e.preventDefault();
+    $(this).parent().find('.next').click();
+    var name = $('.name-input').val();
+    $('.name').text(name);
+
+  }
 });
 
 /*=====  End of NAV ENTRE FORM SECTIONS  ======*/
@@ -84,7 +102,7 @@ $('.mobile-button--cta').on('click', function () {
   });
 })
 $('.review').on('click', function () {
-  $('body, html').css('overflow', 'visible'),
+  $('body, html').css({'overflow':'visible' }),
     $('html, body').animate({
       scrollTop: 0,
     }, function () {
@@ -108,11 +126,11 @@ $('.review').on('click', function () {
 /* Questao 4: Porque escolheste a ESCS */
 $("input[name~='Q4[]']").on('change', function () {
   if ($('#Q4 .disable').prop('checked') == true) {
-    console.log('a')
+    //console.log('a')
     $('#Q4 .disabled').prop('disabled', true);
   } else {
     if ($('#Q4 .disable').prop('checked') == false) {
-      console.log('b')
+      //console.log('b')
       $('#Q4 .disabled').prop('disabled', false);
     }
   }
@@ -121,11 +139,11 @@ $("input[name~='Q4[]']").on('change', function () {
 /* Questao 5: Porque escolheste o curso */
 $("input[name~='Q5[]']").on('change', function () {
   if ($('#Q5 .disable').prop('checked') == true) {
-    console.log('a')
+    //console.log('a')
     $('#Q5 .disabled').prop('disabled', true);
   } else {
     if ($('#Q5 .disable').prop('checked') == false) {
-      console.log('b')
+      //console.log('b')
       $('#Q5 .disabled').prop('disabled', false);
     }
   }

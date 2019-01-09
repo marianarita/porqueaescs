@@ -13,11 +13,6 @@ require('form-handler.php');
     <title>
         Porquê a ESCS - Questionário
     </title>
-    <style>
-    body{
-        overflow: visible !important;
-    }
-    </style>
     <meta content="Este estudo tem como objectivo a representação visual de um inquérito feito a alunos e ex alunos sobre quais os motivos que os levaram a escolher a ESCS."
         name="description">
     <!-- FAVICON -->
@@ -77,25 +72,25 @@ require('form-handler.php');
         </div>
     </section>
     <div class="mobile-wrapper">
-    <section class="_1col mobile">
+        <section class="_1col mobile">
             <div class="mobile-section__text">
                 <div class="mobile-section_text_title">
                     <h1 class="mobile-big-title">Porquê a</h1>
                     <h1 class="mobile-section__header--bigger">ESCS?</h1>
                 </div>
-                    <div class="mobile-section__text__quote">
-                        <p>"Somos uma instituição cada vez mais comprometida e atenta às dinâmicas da academia, do mundo
-                            empresarial e da sociedade. Somos reconhecidos pela qualidade do ensino, pela experiência da
-                            aprendizagem, pelo rigor académico e pela reputação dos nossos diplomados e docentes. ”</p>
-        
-                    </div>
-                    <a class="mobile-button--cta">Responder ao questionário</a>
+                <div class="mobile-section__text__quote">
+                    <p>"Somos uma instituição cada vez mais comprometida e atenta às dinâmicas da academia, do mundo
+                        empresarial e da sociedade. Somos reconhecidos pela qualidade do ensino, pela experiência da
+                        aprendizagem, pelo rigor académico e pela reputação dos nossos diplomados e docentes. ”</p>
 
                 </div>
-    </section>
-</div>
+                <a class="mobile-button--cta">Responder ao questionário</a>
+
+            </div>
+        </section>
+    </div>
     <div class="form-wrapper">
-    <div class="form-wrapper-background"></div>
+        <div class="form-wrapper-background"></div>
         <form id="form" method="post">
             <div class="form-section" id="name">
                 <div class="filler"></div>
@@ -103,10 +98,18 @@ require('form-handler.php');
                     Antes de começares, qual é o teu nome?
                 </h1>
                 <p>
-                       Não vai ser guardado, é só para te conhecermos melhor.
-                    </p>
-                <input class="name-input" placeholder="Escreve aqui o teu nome" type="text">
+                    Não vai ser guardado, é só para te conhecermos melhor.
+                </p>
+                <input class="text name-input" placeholder="Escreve aqui o teu nome" type="text">
                 <input class="next" type="button" value="Seguinte">
+            </div>
+            <div class="form-section" id="Q2">
+                <h1>
+                    A tua idade
+                </h1>
+                <p>
+                    <span class="name">_ _ _ _ _ _ _ _ _ _</span>, quantos anos tens?
+                </p><input name="Q2" placeholder="A tua idade"> <input class="next" type="button" value="Seguinte">
             </div>
             <div class="form-section" id="Q1">
                 <h1>
@@ -133,14 +136,7 @@ require('form-handler.php');
                 </div>
                 <input class="next" type="button" value="Seguinte">
             </div>
-            <div class="form-section" id="Q2">
-                <h1>
-                    A tua idade
-                </h1>
-                <p>
-                    <span class="name">_ _ _ _ _ _ _ _ _ _</span>, quantos anos tens?
-                </p><input name="Q2" placeholder="A tua idade"> <input class="next" type="button" value="Seguinte">
-            </div>
+            
             <div class="form-section" id="Q3">
                 <h1>
                     Qual foi o teu último curso/formação na ESCS?
@@ -211,182 +207,184 @@ require('form-handler.php');
                                 em Storytelling</label>
                         </div>
                     </div>
-                    <input class="next" type="button" value="Seguinte">
-                </div>
-                <div class="form-section" id="Q4">
-                    <h1>
-                        Porque escolheste estudar na ESCS?
-                    </h1>
-                    <p>
-                        Todos nós temos uma razão, mesmo que seja nenhuma.
-                    </p>
-
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_escs_1" name="Q4[]" type="checkbox"
-                            value="escolha_escs_1"><label class="general-checkbox-custom-label" for="escolha_escs_1">Localização</label>
-                    </div>
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_escs_2" name="Q4[]" type="checkbox"
-                            value="escolha_escs_2"><label class="general-checkbox-custom-label" for="escolha_escs_2">Prestígio</label>
-                    </div>
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_escs_3" name="Q4[]" type="checkbox"
-                            value="escolha_escs_3"><label class="general-checkbox-custom-label" for="escolha_escs_3">Custos
-                            mais reduzidos</label>
-                    </div>
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_escs_4" name="Q4[]" type="checkbox"
-                            value="escolha_escs_4"><label class="general-checkbox-custom-label" for="escolha_escs_4">Possibilidade
-                            de trabalhar e
-                            estudar</label>
-                    </div>
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_escs_5" name="Q4[]" type="checkbox"
-                            value="escolha_escs_5"><label class="general-checkbox-custom-label" for="escolha_escs_5">Qualidade
-                            da vida académica e
-                            convívio</label>
-                    </div>
-                    <div>
-                        <input class="general-checkbox-custom disable" id="escolha_escs_6" name="Q4[]" type="checkbox"
-                            value="escolha_escs_6"><label class="general-checkbox-custom-label" for="escolha_escs_6">Nenhum
-                            dos anteriores</label>
-                    </div>
-                    <input class="next" type="button" value="Seguinte">
 
                 </div>
-                <div class="form-section" id="Q5">
-                    <h1>
-                        Porque escolheste fazer <span class="curso">o curso que indicaste</span>?
-                    </h1>
-                    <p>
-                        Escolhe todas as opções que se aplicam.
-                    </p>
-                    <div>
-                        <input class="general-checkbox-custom  disabled" id="escolha_curso_1" name="Q5[]" type="checkbox"
-                            value="escolha_curso_1"><label class="general-checkbox-custom-label" for="escolha_curso_1">O
-                            curso tem saídas profissionais.</label>
+                <input class="next" type="button" value="Seguinte">
+            </div>
+            <div class="form-section" id="Q4">
+                <h1>
+                    Porque escolheste estudar na ESCS?
+                </h1>
+                <p>
+                    Todos nós temos uma razão, mesmo que seja nenhuma.
+                </p>
+
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_escs_1" name="Q4[]" type="checkbox"
+                        value="escolha_escs_1"><label class="general-checkbox-custom-label" for="escolha_escs_1">Localização</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_escs_2" name="Q4[]" type="checkbox"
+                        value="escolha_escs_2"><label class="general-checkbox-custom-label" for="escolha_escs_2">Prestígio</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_escs_3" name="Q4[]" type="checkbox"
+                        value="escolha_escs_3"><label class="general-checkbox-custom-label" for="escolha_escs_3">Custos
+                        mais reduzidos</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_escs_4" name="Q4[]" type="checkbox"
+                        value="escolha_escs_4"><label class="general-checkbox-custom-label" for="escolha_escs_4">Possibilidade
+                        de trabalhar e
+                        estudar</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_escs_5" name="Q4[]" type="checkbox"
+                        value="escolha_escs_5"><label class="general-checkbox-custom-label" for="escolha_escs_5">Qualidade
+                        da vida académica e
+                        convívio</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disable" id="escolha_escs_6" name="Q4[]" type="checkbox"
+                        value="escolha_escs_6"><label class="general-checkbox-custom-label" for="escolha_escs_6">Nenhum
+                        dos anteriores</label>
+                </div>
+                <input class="next" type="button" value="Seguinte">
+
+            </div>
+            <div class="form-section" id="Q5">
+                <h1>
+                    Porque escolheste fazer <span class="curso">o curso que indicaste</span>?
+                </h1>
+                <p>
+                    Escolhe todas as opções que se aplicam.
+                </p>
+                <div>
+                    <input class="general-checkbox-custom  disabled" id="escolha_curso_1" name="Q5[]" type="checkbox"
+                        value="escolha_curso_1"><label class="general-checkbox-custom-label" for="escolha_curso_1">O
+                        curso tem saídas profissionais.</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_curso_2" name="Q5[]" type="checkbox"
+                        value="escolha_curso_2"><label class="general-checkbox-custom-label" for="escolha_curso_2">Vocação,
+                        gosto pelas matérias.</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_curso_3" name="Q5[]" type="checkbox"
+                        value="escolha_curso_3"><label class="general-checkbox-custom-label" for="escolha_curso_3">Boa
+                        empregabilidade dos diplomados</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_curso_4" name="Q5[]" type="checkbox"
+                        value="escolha_curso_4"><label class="general-checkbox-custom-label" for="escolha_curso_4">O
+                        curso tem uma boa componente prática</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_curso_5" name="Q5[]" type="checkbox"
+                        value="escolha_curso_5"><label class="general-checkbox-custom-label" for="escolha_curso_5">Médias
+                        de entrada acessíveis</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disabled" id="escolha_curso_6" name="Q5[]" type="checkbox"
+                        value="escolha_curso_6"><label class="general-checkbox-custom-label" for="escolha_curso_6">Sem
+                        média de entrada noutro curso</label>
+                </div>
+                <div>
+                    <input class="general-checkbox-custom disable" id="escolha_curso_7" name="Q5[]" type="checkbox"
+                        value="escolha_curso_7"><label class="general-checkbox-custom-label" for="escolha_curso_7">Nenhum
+                        dos anteriores</label>
+                </div>
+                <input class="next" type="button" value="Seguinte">
+
+            </div>
+            <div class="form-section no-padding" id="Q6">
+                <h1>
+                    Qualidades da ESCS
+                </h1>
+                <p>
+                    <span class="name">_ _ _ _ _ _ _ _ _ _</span>, indica no máximo, 3 qualidades da ESCS.
+                </p>
+                <div class="_2col">
+                    <div class="_col">
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_1"
+                                value="qualidades_escs_1"><label for="qualidades_escs_1" class="general-checkbox-custom-label">Bons
+                                professores</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_2"
+                                value="qualidades_escs_2"><label for="qualidades_escs_2" class="general-checkbox-custom-label">Prestígio
+                                do estabelecimento</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_3"
+                                value="qualidades_escs_3"><label for="qualidades_escs_3" class="general-checkbox-custom-label">Boas
+                                infraestruturas (salas de aula e apoio didático)</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_4"
+                                value="qualidades_escs_4"><label for="qualidades_escs_4" class="general-checkbox-custom-label">Boa
+                                biblioteca</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_5"
+                                value="qualidades_escs_5"><label for="qualidades_escs_5" class="general-checkbox-custom-label">Bons
+                                meios informáticos</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_6"
+                                value="qualidades_escs_6"><label for="qualidades_escs_6" class="general-checkbox-custom-label">Localização
+                                (facilidade de transporte)</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_7"
+                                value="qualidades_escs_7"><label for="qualidades_escs_7" class="general-checkbox-custom-label">Garantia
+                                de saídas profissionais</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_8"
+                                value="qualidades_escs_8"><label for="qualidades_escs_8" class="general-checkbox-custom-label">Médias
+                                de entrada elevadas</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_9"
+                                value="qualidades_escs_9"><label for="qualidades_escs_9" class="general-checkbox-custom-label">Elevado
+                                sucesso escolar da instituição</label></div>
+
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_10"
+                                value="qualidades_escs_10"><label for="qualidades_escs_10" class="general-checkbox-custom-label">qualidade
+                                dos currículos dos cursos</label></div>
                     </div>
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_curso_2" name="Q5[]" type="checkbox"
-                            value="escolha_curso_2"><label class="general-checkbox-custom-label" for="escolha_curso_2">Vocação,
-                            gosto pelas matérias.</label>
+                    <div class="_col">
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_11"
+                                value="qualidades_escs_11"><label for="qualidades_escs_11" class="general-checkbox-custom-label">Atividade
+                                de investigação científica</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_12"
+                                value="qualidades_escs_12"><label for="qualidades_escs_12" class="general-checkbox-custom-label">Atividades
+                                extracurriculares</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_13"
+                                value="qualidades_escs_13"><label for="qualidades_escs_13" class="general-checkbox-custom-label">Boa
+                                organização geral</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_14"
+                                value="qualidades_escs_14"><label for="qualidades_escs_14" class="general-checkbox-custom-label">Estruturas
+                                de desporto e lazer</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_15"
+                                value="qualidades_escs_15"><label for="qualidades_escs_15" class="general-checkbox-custom-label">Zona
+                                de refeições</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_16"
+                                value="qualidades_escs_16"><label for="qualidades_escs_16" class="general-checkbox-custom-label">Serviços
+                                médicos e sociais</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_17"
+                                value="qualidades_escs_17"><label for="qualidades_escs_17" class="general-checkbox-custom-label">Apoio
+                                administrativo</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_18"
+                                value="qualidades_escs_18"><label for="qualidades_escs_18" class="general-checkbox-custom-label">Apoio
+                                em intercâmbios com o estrangeiro</label></div>
+                        <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_19"
+                                value="qualidades_escs_19"><label for="qualidades_escs_19" class="general-checkbox-custom-label">Uma
+                                boa associação de estudantes</label></div>
                     </div>
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_curso_3" name="Q5[]" type="checkbox"
-                            value="escolha_curso_3"><label class="general-checkbox-custom-label" for="escolha_curso_3">Boa
-                            empregabilidade dos diplomados</label>
-                    </div>
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_curso_4" name="Q5[]" type="checkbox"
-                            value="escolha_curso_4"><label class="general-checkbox-custom-label" for="escolha_curso_4">O
-                            curso tem uma boa componente prática</label>
-                    </div>
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_curso_5" name="Q5[]" type="checkbox"
-                            value="escolha_curso_5"><label class="general-checkbox-custom-label" for="escolha_curso_5">Médias
-                            de entrada acessíveis</label>
-                    </div>
-                    <div>
-                        <input class="general-checkbox-custom disabled" id="escolha_curso_6" name="Q5[]" type="checkbox"
-                            value="escolha_curso_6"><label class="general-checkbox-custom-label" for="escolha_curso_6">Sem
-                            média de entrada noutro curso</label>
-                    </div>
-                    <div>
-                        <input class="general-checkbox-custom disable" id="escolha_curso_7" name="Q5[]" type="checkbox"
-                            value="escolha_curso_7"><label class="general-checkbox-custom-label" for="escolha_curso_7">Nenhum
-                            dos anteriores</label>
-                    </div>
-                    <input class="next" type="button" value="Seguinte">
+
 
                 </div>
-                <div class="form-section no-padding" id="Q6">
-                    <h1>
-                        Qualidades da ESCS
-                    </h1>
-                    <p>
-                        <span class="name">_ _ _ _ _ _ _ _ _ _</span>, indica no máximo, 3 qualidades da ESCS.
-                    </p>
-                    <div class="_2col">
-                        <div class="_col">
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_1"
-                                    value="qualidades_escs_1"><label for="qualidades_escs_1" class="general-checkbox-custom-label">Bons
-                                    professores</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_2"
-                                    value="qualidades_escs_2"><label for="qualidades_escs_2" class="general-checkbox-custom-label">Prestígio
-                                    do estabelecimento</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_3"
-                                    value="qualidades_escs_3"><label for="qualidades_escs_3" class="general-checkbox-custom-label">Boas
-                                    infraestruturas (salas de aula e apoio didático)</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_4"
-                                    value="qualidades_escs_4"><label for="qualidades_escs_4" class="general-checkbox-custom-label">Boa
-                                    biblioteca</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_5"
-                                    value="qualidades_escs_5"><label for="qualidades_escs_5" class="general-checkbox-custom-label">Bons
-                                    meios informáticos</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_6"
-                                    value="qualidades_escs_6"><label for="qualidades_escs_6" class="general-checkbox-custom-label">Localização
-                                    (facilidade de transporte)</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_7"
-                                    value="qualidades_escs_7"><label for="qualidades_escs_7" class="general-checkbox-custom-label">Garantia
-                                    de saídas profissionais</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_8"
-                                    value="qualidades_escs_8"><label for="qualidades_escs_8" class="general-checkbox-custom-label">Médias
-                                    de entrada elevadas</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_9"
-                                    value="qualidades_escs_9"><label for="qualidades_escs_9" class="general-checkbox-custom-label">Elevado
-                                    sucesso escolar da instituição</label></div>
+                <input class="next" type="button" value="Seguinte">
 
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_10"
-                                    value="qualidades_escs_10"><label for="qualidades_escs_10" class="general-checkbox-custom-label">qualidade
-                                    dos currículos dos cursos</label></div>
-                        </div>
-                        <div class="_col">
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_11"
-                                    value="qualidades_escs_11"><label for="qualidades_escs_11" class="general-checkbox-custom-label">Atividade
-                                    de investigação científica</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_12"
-                                    value="qualidades_escs_12"><label for="qualidades_escs_12" class="general-checkbox-custom-label">Atividades
-                                    extracurriculares</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_13"
-                                    value="qualidades_escs_13"><label for="qualidades_escs_13" class="general-checkbox-custom-label">Boa
-                                    organização geral</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_14"
-                                    value="qualidades_escs_14"><label for="qualidades_escs_14" class="general-checkbox-custom-label">Estruturas
-                                    de desporto e lazer</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_15"
-                                    value="qualidades_escs_15"><label for="qualidades_escs_15" class="general-checkbox-custom-label">Zona
-                                    de refeições</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_16"
-                                    value="qualidades_escs_16"><label for="qualidades_escs_16" class="general-checkbox-custom-label">Serviços
-                                    médicos e sociais</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_17"
-                                    value="qualidades_escs_17"><label for="qualidades_escs_17" class="general-checkbox-custom-label">Apoio
-                                    administrativo</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_18"
-                                    value="qualidades_escs_18"><label for="qualidades_escs_18" class="general-checkbox-custom-label">Apoio
-                                    em intercâmbios com o estrangeiro</label></div>
-                            <div> <input type="checkbox" class="general-checkbox-custom" name="Q6[]" id="qualidades_escs_19"
-                                    value="qualidades_escs_19"><label for="qualidades_escs_19" class="general-checkbox-custom-label">Uma
-                                    boa associação de estudantes</label></div>
-                        </div>
-
-                        <input class="next" type="button" value="Seguinte">
-
-                    </div>
-                    <div class="form-section final">
-                        <h1>
-                            <span class="name">_ _ _ _ _ _ _ _ _ _</span>, antes de submeteres:
-                        </h1>
-                        <p>
-                            Obrigada por teres preenchido o formulário.
-                            <br> Podes submeter ou rever os dados que preencheste.</p>
-                        <div>
-                            <input type="submit" class="submit" value="Submeter">
-                            <input type="button" class="review" value="Rever">
-                        </div>
-
-                    </div>
+            </div>
+            <div class="form-section final">
+                <h1>
+                    <span class="name">_ _ _ _ _ _ _ _ _ _</span>, antes de submeteres:
+                </h1>
+                <p>
+                    Obrigada por teres preenchido o formulário.
+                    <br> Podes submeter ou rever os dados que preencheste.</p>
+                <div>
+                    <input type="submit" class="submit" value="Submeter">
+                    <input type="button" class="review" value="Rever">
                 </div>
+            </div>
         </form>
     </div>
     <script src="js/jquery.js">
