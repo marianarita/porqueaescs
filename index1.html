@@ -27,13 +27,13 @@
 			<a href="#section-5" class="nav-item">Notícias</a>
 			<a href="#section-6" class="nav-item">Feedback</a>
 		
-			<div class="nav-item"><img class="switch" src="img/switch.svg"></div>
+			<div class="nav-item"><img class="switch" src="img/switch.svg" alt="Light switch"></div>
 		</div>
 	</nav>
 
 	<!-- SIDE NAVIGATION -->
 	<div class="sidenav">
-		<div data-section="section-1" data-color="var(--light-blue)" class="sidenav-item ">
+		<div data-section="section-1" data-color="var(--light-blue)" class="sidenav-item sidenav-active">
 			<p class="sidenav-text">01</p>
 		</div>
 		<div data-section="section-2" data-color="var(--yellow)" class="sidenav-item">
@@ -55,24 +55,35 @@
 
 	<!-- HOME -->
 	<section id="section-1" class="slide container flex flex-center">
-		<div class="col-2 col-lg-1 col-md-0"></div>
+		<div class="col-2 col-lg-1 d-md-none"></div>
 		<div class="flex flex-end">
-			<div class="col-5 border-bottom-blue">
+			<div class="col-5 col-lg-6 col-md-12 rel">
+				<div class="line-horizontal-blue d-md-none"></div>
 				<h1>
 					Porquê a
-					<div class="border-right-blue text-large col-12">ESCS?</div>
+					<div class="text-large rel">ESCS? <div class="line-vertical-blue d-md-none"></div></div>
 				</h1>
-				<div class="flex flex-justify-end">
-					<a href="#section-2" class="btn btn-hover-blue text-blue-light">Explorar</a>
+				
+				<div class="d-none d-md-block">
+					<blockquote>
+						"Somos uma instituição cada vez mais comprometida e atenta às dinâmicas da academia, do mundo empresarial e da
+						sociedade. Somos reconhecidos pela qualidade do ensino, pela experiência da aprendizagem, pelo rigor académico e
+						pela reputação dos nossos diplomados e docentes.” <br><br>
+						<span class="text-blue">Presidente da ESCS, Prof. Doutor André Sendin (2018)</span>
+					</blockquote>
 				</div>
+				
+				<div class="flex flex-justify-end section-1-cta">
+					<a href="#section-2" class="btn btn-hover-blue text-blue-light">Explorar</a>
+				</div>				
 			</div>
-			<div class="col-5">
-				<p class="quote">
+			<div class="col-5 d-md-none">
+				<blockquote>
 					"Somos uma instituição cada vez mais comprometida e atenta às dinâmicas da academia, do mundo empresarial e da
 					sociedade. Somos reconhecidos pela qualidade do ensino, pela experiência da aprendizagem, pelo rigor académico e
-					pela reputação dos nossos diplomados e docentes.” <br>
+					pela reputação dos nossos diplomados e docentes.” <br><br>
 					<span class="text-blue">Presidente da ESCS, Prof. Doutor André Sendin (2018)</span>
-				</p>
+				</blockquote>
 			</div>
 		</div>
 	</section>
@@ -81,13 +92,16 @@
 	<section id="section-2" class="slide container flex flex-center">
 		<div class="col-1 col-lg-0"></div>
 		<div class="flex-direction-column col-12">
-			<div class="col-5 border-bottom-yellow">
+			<div class="col-6 rel">
+				<div class="line-horizontal-yellow"></div>
 				<h1 class="flex-direction-column">
 					Sobre o
-					<div class="border-right-yellow text-small uppercase">projecto</div>
+					<div class="text-small rel uppercase">projecto<div class="line-verical-yellow d-md-none"></div>
+					</div>
 				</h1>
 			</div>
-			<div class="col-9">
+			
+			<div class="col-9 col-md-12">
 				<p class="condensed">
 					Este estudo tem como objectivo a representação visual de um inquérito feito a alunos e ex alunos sobre quais os
 					motivos que os levaram a escolher a ESCS.
@@ -105,7 +119,7 @@
 	<!-- RESULTADOS -->
 	<section id="section-3" class="slide container flex flex-center">
 		<div class="col-1 col-lg-0"></div>
-		<div class="flex-direction-column flex-self-stretch col-12 rel">
+		<div class="flex-direction-column col-12 rel">
 			<!-- SLIDER FIXED ELEMENTS -->
 			<div class="flex flex-center col-12">
 				<div class="col-6 border-bottom-red">
@@ -137,7 +151,7 @@
 			<!-- CONTENT 01 -->
 			<div class="graphs">
 				<!-- Deve ter position absolute e muda a opacidade na navegação-->
-				<div data-graph="1" data-sectiontitle="A Amostra"  data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph current">
+				<div data-graph="1" data-sectiontitle="A amostra"  data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph current">
 					<div class="col-6">
 						CLUSTER FORCE GRAPH
 					</div>
@@ -155,7 +169,7 @@
 				</div>
 
 				<!-- CONTENT 02 -->
-				<div data-graph="2" data-sectiontitle="Porquê a ESCS?" data-graphcolor="var(--yellow)"  class="flex flex-baseline col-12 graph" >
+				<div data-graph="2" data-sectiontitle="A amostra" data-graphcolor="var(--yellow)"  class="flex flex-baseline col-12 graph" >
 					<div class="col-6">
 						BAR GRAPH
 					</div>
@@ -173,7 +187,7 @@
 				</div>
 
 				<!-- CONTENT 03 -->
-				<div data-graph="3" data-sectiontitle="Escolha do Curso"  data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph" >
+				<div data-graph="3" data-sectiontitle="Porquê a ESCS?"  data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph" >
 					<div class="col-6">
 						SPIDER CHART
 					</div>
@@ -191,7 +205,7 @@
 				</div>
 
 				<!-- CONTENT 04 -->
-				<div data-graph="4" data-sectiontitle="Não me lembro"  data-graphcolor="var(--yellow)" class="flex flex-baseline col-12 graph" >
+				<div data-graph="4" data-sectiontitle="Porquê a ESCS?"  data-graphcolor="var(--yellow)" class="flex flex-baseline col-12 graph" >
 					<div class="col-6">
 						POLAR CHART
 					</div>
@@ -209,7 +223,7 @@
 				</div>
 
 				<!-- CONTENT 04 -->
-				<div data-graph="5" data-sectiontitle="Características da ESCS"  data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph" >
+				<div data-graph="5" data-sectiontitle="Porquê a ESCS?"  data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph" >
 					<div class="col-6">
 						DOUGHTNUT CHART
 					</div>

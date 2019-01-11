@@ -1,0 +1,783 @@
+/*
+* 
+* PORQUE A ESCS
+* PAGINA DE RESULTADOS // CSS
+* Trabalho para a Cadeira de Laboratorio de Aplicacoes Interativas 
+* Feito por:
+* Edite Fernandes, no 9939 
+* Filipa Ribeiro, no 9987 
+* Mariana Rita, no 9972 
+* 
+*/
+
+/*=============================================
+=               CUSTOM VARIABLES              =
+=============================================*/
+
+:root {
+	/* Brand colors */
+	--light-yellow: #ffbe3b;
+	--yellow: #e9a60d;
+	--dark-yellow: #93670f;
+	--light-red: #f41637;
+	--red: #be1428;
+	--dark-red: #820f20;
+	--light-blue: #3caab4;
+	--blue: #007382;
+	--dark-blue: #005564;
+	--dark-gray: #3c3c3b;
+	--gray: #595a5c;
+	--bg-blue: #101719;
+	--bg-blue-light: #2a3538;
+
+	/* Type */
+	--font-primary: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	--font-secondary: 'Roboto Condensed', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*=============================================
+=                     FONTS                   =
+=============================================*/
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.eot');
+	src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold.ttf') format('truetype'), url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium.eot');
+	src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Medium.woff2') format('woff2'), url('../fonts/Roboto-Medium.woff') format('woff'), url('../fonts/Roboto-Medium.ttf') format('truetype'), url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.eot');
+	src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Light.eot');
+	src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Light.woff2') format('woff2'), url('../fonts/Roboto-Light.woff') format('woff'), url('../fonts/Roboto-Light.ttf') format('truetype'), url('../fonts/Roboto-Light.svg#Roboto-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/RobotoCondensed-Bold.eot');
+	src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url('../fonts/RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'), url('../fonts/RobotoCondensed-Bold.woff') format('woff'), url('../fonts/RobotoCondensed-Bold.ttf') format('truetype'), url('../fonts/RobotoCondensed-Bold.svg#RobotoCondensed-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/RobotoCondensed-Regular.eot');
+	src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url('../fonts/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff'), url('../fonts/RobotoCondensed-Regular.ttf') format('truetype'), url('../fonts/RobotoCondensed-Regular.svg#RobotoCondensed-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/RobotoCondensed-Light.eot');
+	src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url('../fonts/RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoCondensed-Light.woff2') format('woff2'), url('../fonts/RobotoCondensed-Light.woff') format('woff'), url('../fonts/RobotoCondensed-Light.ttf') format('truetype'), url('../fonts/RobotoCondensed-Light.svg#RobotoCondensed-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+/*=============================================
+=                     RESET                   =
+=============================================*/
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html, body {
+	width: 100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: white;
+	margin: 0;
+	background-color: var(--bg-blue);
+}
+
+img {
+	max-width: 100%;
+}
+
+section {
+	min-height: 100%;
+	transition: 0.4s;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: var(--bg-blue);
+	opacity: 0;
+}
+
+/* ------------ SCROLLBAR HIDE ------------- */
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+/*=============================================
+=                     TYPE                    =
+=============================================*/
+a {
+	text-decoration: none;
+	color: var(--light-blue);
+	transition: 0.3s;
+	font-size: 1.125em;
+}
+
+a:hover {
+	color: var(--blue);
+}
+
+
+h1, h2, h3, h4 {
+	margin-top: 0;
+	transition: 0.3s;
+}
+
+h1 {
+	font-size: 5.625em;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 2.25em;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 2.5em;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	font-weight: 400;
+}
+
+h4 {
+	font-size: 1.5625em;
+}
+
+p, blockquote {
+	font-size: 1.125em;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+blockquote {
+	margin: 0 30px;
+	font-weight: 300;
+	font-family: var(--font-secondary);
+}
+
+dl, ol, ul {
+	font-size: 1em;
+	margin: 0 0 2.4em;
+	padding: 0;
+}
+
+dd, dt, li {
+	line-height: 2.4;
+	margin: 0;
+}
+
+
+/*=============================================
+=                    HELPER                   =
+=============================================*/
+
+.d-block {display: block;}
+.d-none {display: none;}
+.margin-center {margin: 0 auto;}
+.rel {position: relative;}
+
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+.text-blue {color: var(--blue);}
+.text-blue-light {color: var(--light-blue);}
+.text-red {color: var(--red);}
+.text-red-light {color: var(--light-red);}
+.text-yellow {color: var(--yellow);}
+.text-yellow-light {color: var(--light-yellow);}
+
+.text-large {font-size: 1.65em;}
+.text-small {font-size: 0.5em;}
+
+.uppercase {text-transform: uppercase;}
+.condensed {font-family: var(--font-secondary);}
+
+
+/*=============================================
+=                  GRID SYSTEM                =
+=============================================*/
+
+.container {
+	padding: 20px;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-center {
+	align-items: center;
+}
+
+.flex-baseline {
+	align-items: baseline;
+}
+
+.flex-end {
+	align-items: flex-end;
+}
+
+.flex-justify-end {
+	justify-content: flex-end;
+}
+
+.flex-direction-column {
+	flex-direction: column;
+}
+
+.col-1 {
+	width: calc(100% / 12);
+}
+
+.col-2 {
+	width: calc((100% / 12) * 2);
+}
+
+.col-3 {
+	width: calc((100% / 12) * 3);
+}
+
+.col-4 {
+	width: calc((100% / 12) * 4);
+}
+
+.col-5 {
+	width: calc((100% / 12) * 5);
+}
+
+.col-6 {
+	width: calc((100% / 12) * 6);
+}
+
+.col-7 {
+	width: calc((100% / 12) * 7);
+}
+
+.col-8 {
+	width: calc((100% / 12) * 8);
+}
+
+.col-9 {
+	width: calc((100% / 12) * 9);
+}
+
+.col-10 {
+	width: calc((100% / 12) * 10);
+}
+
+.col-11 {
+	width: calc((100% / 12) * 11);
+}
+
+.col-12 {
+	width: 100%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+	padding: 0px 12px;
+}
+
+/*=============================================
+=                  DIV BORDERS                =
+=============================================*/
+
+.line-horizontal-blue, .line-horizontal-red, .line-horizontal-yellow {
+    height: 2px;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+}
+
+.line-vertical-blue, .line-vertical-red, .line-verical-yellow {
+    height: 70%;
+    width: 2px;
+    position: absolute;
+    right: 0;
+    bottom: 15%;
+}
+
+.line-horizontal-blue, .line-vertical-blue {
+	background-color: var(--blue);
+}
+
+.line-horizontal-red, .line-vertical-red {
+	background-color: var(--red);
+}
+
+.line-horizontal-yellow, .line-vertical-yellow {
+	background-color: var(--yellow);
+}
+
+/*=============================================
+=                    NAV BAR                  =
+=============================================*/
+
+nav {
+	width: 100vw;
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding: 20px 80px 20px 20px;
+	height: auto;
+	z-index: 99;
+}
+
+.nav-logo {
+	max-width: 48px;
+}
+
+.nav-title, .nav-item {
+	align-self: flex-start;
+	padding: 32px 10px 0px;
+	text-transform: uppercase;
+}
+
+.nav-title {
+	font-weight: 700;
+	margin: 0px 0px 0px 20px;
+}
+
+.nav-item:first-child {
+	padding-left: 0;
+}
+
+.nav-item:last-child {
+	padding-right: 0;
+}
+
+.switch {
+	max-width: 16px;
+	min-width: 16px;
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+.switch:hover {
+	opacity: 0.8;
+}
+
+/*=============================================
+=             SIDE PROGRESS/NAV BAR           =
+=============================================*/
+
+.sidenav {
+	width: 20px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 99;
+}
+
+.sidenav-item {
+	position: relative;
+	width: 20px;
+	height: calc(100vh / 6);
+	background-color: var(--blue);
+	cursor: pointer;
+	transition: 0.4s;
+	z-index: 98;
+}
+
+.sidenav-item:hover {
+	background-color: var(--bg-blue-light) !important;
+}
+
+.sidenav-text {
+	position: absolute;
+	left: -32px;
+	bottom: 0;
+	opacity: 0;
+	transition: all .2s ease;
+
+}
+
+.sidenav-active {
+	opacity: .5;
+}
+
+
+.sidenav-active .sidenav-text{
+	opacity: 1;
+	transition: all .2s ease;
+}
+/*=============================================
+=               SLIDER NAVIGATION             =
+=============================================*/
+
+.slidernav {
+	height: 20px;
+}
+
+.slidernav-item {
+	position: relative;
+	width: 100%;
+	height: 20px;
+	background-color: var(--red);
+	margin: 2px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.slidernav-item:hover {
+	background-color: var(--bg-blue-light) !important;
+}
+
+.slidernav-text {
+	position: absolute;
+	top: -50px;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transition: all .2s ease;
+}
+
+.slidernav-active {
+	/* background-color: var(--dark-red); */
+	opacity: .5;
+}
+
+
+.slidernav-active .slidernav-text {
+	opacity: 1;
+	transition: all .2s ease;
+}
+
+.slider-next {
+	position: absolute;
+	bottom: 0;
+	right: 60px;
+	font-family: var(--font-secondary);
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.slider-next:hover {
+	opacity: 0.8;
+}
+
+/*=============================================
+=                    BUTTONS                  =
+=============================================*/
+
+.btn {
+	padding: 15px 45px;
+	border: 2px solid white;
+}
+
+.btn:hover {
+	color: white;
+	border-color: transparent;
+}
+
+.btn-hover-blue:hover {
+	background-color: var(--blue);
+}
+
+.btn-hover-red:hover {
+	background-color: var(--red);
+}
+
+.btn-hover-yellow:hover {
+	background-color: var(--yellow);
+}
+
+/*=============================================
+=                   SECTIONS                  =
+=============================================*/
+
+#section-1 {
+	transition: none;
+	background: url(../img/escs-bg.png) no-repeat 10% 50%;
+}
+
+#section-2 h1, #section-3 h1, #section-4 h1 {
+	margin: 0.3em 0;
+}
+
+#section-2 p {
+	margin: 2em 0;
+}
+
+#section-3 p, #section-4 p {
+	font-weight: 300;
+}
+
+#section-4 h3 {
+	margin-bottom: 2em;
+}
+
+/*=============================================
+=                 MEDIA QUERIES               =
+=============================================*/
+
+/* --------------- EXCEPTIONS -------------- */
+
+@media screen and (max-width: 1400px) {
+	h1 {
+		font-size: 5.3em;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.navbar a{
+		display: none;
+	}
+	
+	h1 {
+		font-size: 5.1em;
+	}
+	
+	.text-large {
+		font-size: 1.3em;
+	}
+}
+
+/* ------------- LARGE DEVICES ------------- */
+
+@media screen and (max-width: 1200px) {
+	/* Grid system */
+	.col-lg-1 {
+		width: calc(100% / 12);
+	}
+	.col-lg-2 {
+		width: calc((100% / 12) * 2);
+	}
+	.col-lg-3 {
+		width: calc((100% / 12) * 3);
+	}
+	.col-lg-4 {
+		width: calc((100% / 12) * 4);
+	}
+	.col-lg-5 {
+		width: calc((100% / 12) * 5);
+	}
+	.col-lg-6 {
+		width: calc((100% / 12) * 6);
+	}
+	.col-lg-7 {
+		width: calc((100% / 12) * 7);
+	}
+	.col-lg-8 {
+		width: calc((100% / 12) * 8);
+	}
+	.col-lg-9 {
+		width: calc((100% / 12) * 9);
+	}
+	.col-lg-10 {
+		width: calc((100% / 12) * 10);
+	}
+	.col-lg-11 {
+		width: calc((100% / 12) * 11);
+	}
+	.col-lg-12 {
+		width: 100%;
+	}
+	.col-lg-0 {
+		width: 0;
+	}
+	
+	/* Display */
+	.d-lg-block {display: block;}
+	.d-lg-none {display: none;}
+	
+	/* Flex */
+	.flex-lg-column {flex-direction: column;}
+	
+	/* Type */
+	h1 {
+	}
+	
+	/* Others */
+	.nav-item {
+		font-size: 1em;
+	}
+}
+
+/* ------------- MEDIUM DEVICES ------------ */
+
+@media screen and (max-width: 768px) {
+	/* Grid system */
+	.col-md-1 {
+		width: calc(100% / 12);
+	}
+	.col-md-2 {
+		width: calc((100% / 12) * 2);
+	}
+	.col-md-3 {
+		width: calc((100% / 12) * 3);
+	}
+	.col-md-4 {
+		width: calc((100% / 12) * 4);
+	}
+	.col-md-5 {
+		width: calc((100% / 12) * 5);
+	}
+	.col-md-6 {
+		width: calc((100% / 12) * 6);
+	}
+	.col-md-7 {
+		width: calc((100% / 12) * 7);
+	}
+	.col-md-8 {
+		width: calc((100% / 12) * 8);
+	}
+	.col-md-9 {
+		width: calc((100% / 12) * 9);
+	}
+	.col-md-10 {
+		width: calc((100% / 12) * 10);
+	}
+	.col-md-11 {
+		width: calc((100% / 12) * 11);
+	}
+	.col-md-12 {
+		width: 100%;
+	}
+	.col-md-0 {
+		width: 0;
+	}
+	
+	/* Display */
+	.d-md-block {display: block;}
+	.d-md-none {display: none;}
+	
+	/* Flex */
+	.flex-md-column {flex-direction: column;}
+	
+	/* Navbar */
+	nav {padding: 20px;}
+	
+	/* Home - Section 1 */
+	#section-1 h1 {
+		margin: 0;
+		text-align: center;
+	}
+	
+	#section-1 .text-large {
+		font-size: 1.6em;
+	}
+	
+	#section-1 blockquote {
+		text-align: center;
+	}
+	
+	.section-1-cta {
+		justify-content: center !important;
+		margin-top: 20px;
+	}
+}
+
+/* ------------- SMALL DEVICES ------------- */
+
+@media screen and (max-width: 576px) {
+	/* Grid system */
+	.col-sm-1 {
+		width: calc(100% / 12);
+	}
+	.col-sm-2 {
+		width: calc((100% / 12) * 2);
+	}
+	.col-sm-3 {
+		width: calc((100% / 12) * 3);
+	}
+	.col-sm-4 {
+		width: calc((100% / 12) * 4);
+	}
+	.col-sm-5 {
+		width: calc((100% / 12) * 5);
+	}
+	.col-sm-6 {
+		width: calc((100% / 12) * 6);
+	}
+	.col-sm-7 {
+		width: calc((100% / 12) * 7);
+	}
+	.col-sm-8 {
+		width: calc((100% / 12) * 8);
+	}
+	.col-sm-9 {
+		width: calc((100% / 12) * 9);
+	}
+	.col-sm-10 {
+		width: calc((100% / 12) * 10);
+	}
+	.col-sm-11 {
+		width: calc((100% / 12) * 11);
+	}
+	.col-sm-12 {
+		width: 100%;
+	}
+	.col-sm-0 {
+		width: 0;
+	}
+	
+	/* Display */
+	.d-sm-block {display: block;}
+	.d-sm-none {display: none;}
+	
+	/* Flex */
+	.flex-sm-column {flex-direction: column;}
+}
+
+
+.visible{
+	opacity: 1;
+	z-index: 97;
+}
+
+
+.graph {
+    position: absolute;
+    background-color: var(--bg-blue);
+	opacity: 0;
+	transition: all .2s ease-in-out;
+
+}
+
+.graphs {
+    position: relative;
+    height: 35vh;
+}
+
+.current{
+	opacity: 1;
+	transition: all .2s ease-in-out;
+}
