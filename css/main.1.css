@@ -1,7 +1,7 @@
 /*
 * 
 * PORQUE A ESCS
-* PÃƒÆ’Ã‚ÂGINA DE RESULTADOS // CSS
+* PAGINA DE RESULTADOS // CSS
 * Trabalho para a Cadeira de Laboratorio de Aplicacoes Interativas 
 * Feito por:
 * Edite Fernandes, no 9939 
@@ -29,6 +29,7 @@
 	--gray: #595a5c;
 	--bg-blue: #101719;
 	--bg-blue-light: #2a3538;
+
 	/* Type */
 	--font-primary: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	--font-secondary: 'Roboto Condensed', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -110,7 +111,6 @@ html, body {
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	font-size: 100%;
 	color: white;
 	margin: 0;
 	background-color: var(--bg-blue);
@@ -131,9 +131,6 @@ section {
 	opacity: 0;
 }
 
-#section-1{
-	transition: none;
-}
 /* ------------ SCROLLBAR HIDE ------------- */
 
 ::-webkit-scrollbar {
@@ -143,14 +140,11 @@ section {
 /*=============================================
 =                     TYPE                    =
 =============================================*/
-body{
-	font-size: 62,5%;
-
-}
 a {
 	text-decoration: none;
 	color: var(--light-blue);
 	transition: 0.3s;
+	font-size: 1.125em;
 }
 
 a:hover {
@@ -158,55 +152,44 @@ a:hover {
 }
 
 
-h1, h2, h3, h4, h5, h6, {
-	font-weight: bold;
-	margin: 0;
+h1, h2, h3, h4 {
+	margin-top: 0;
+	transition: 0.3s;
 }
 
-h1, {
-	font-size: 1.875em;
-	line-height: 1.6;
-	margin-bottom: 0.8em;
+h1 {
+	font-size: 5.625em;
+	font-weight: 400;
 }
 
-h2, {
-	font-size: 1.40625em;
-	line-height: 1.0666666666666667;
-	margin-bottom: 1.0666666666666667em;
+h2 {
+	font-size: 2.25em;
+	font-weight: 400;
 }
 
 h3 {
-	font-size: 0.9375em;
+	font-size: 2.5em;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
+	font-weight: 400;
 }
 
-h4, {
-	font-size: 0.8203125em;
-	line-height: 1.8285714285714285;
-	margin-bottom: 1.8285714285714285em;
-}
-
-h5 {
-	font-size: 0.703125em;
-	line-height: 2.1333333333333333;
-	margin-bottom: 2.1333333333333333em;
-}
-
-h6, {
-	font-size: 0.625em;
-	line-height: 2.4;
-	margin-bottom: 2.4em;
+h4 {
+	font-size: 1.5625em;
 }
 
 p, blockquote {
-	font-size: 0.625em;
-	margin: 0 0 2.4em;
-	line-height: 2.4;
+	font-size: 1.125em;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
+}
+
+blockquote {
+	margin: 0 30px;
+	font-weight: 300;
+	font-family: var(--font-secondary);
 }
 
 dl, ol, ul {
@@ -225,63 +208,27 @@ dd, dt, li {
 =                    HELPER                   =
 =============================================*/
 
-.block {
-	display: block;
-}
+.d-block {display: block;}
+.d-none {display: none;}
+.margin-center {margin: 0 auto;}
+.rel {position: relative;}
 
-.margin-center {
-	margin: 0 auto;
-}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
 
-.rel {
-	position: relative;
-}
+.text-blue {color: var(--blue);}
+.text-blue-light {color: var(--light-blue);}
+.text-red {color: var(--red);}
+.text-red-light {color: var(--light-red);}
+.text-yellow {color: var(--yellow);}
+.text-yellow-light {color: var(--light-yellow);}
 
-.text-center {
-	text-align: center;
-}
+.text-large {font-size: 1.65em;}
+.text-small {font-size: 0.5em;}
 
-.text-right {
-	text-align: right;
-}
+.uppercase {text-transform: uppercase;}
+.condensed {font-family: var(--font-secondary);}
 
-.text-blue {
-	color: var(--blue);
-}
-
-.text-blue-light {
-	color: var(--light-blue);
-}
-
-.text-red {
-	color: var(--red);
-}
-
-.text-red-light {
-	color: var(--light-red);
-}
-
-.text-yellow {
-	color: var(--yellow);
-}
-
-.text-yellow-light {
-	color: var(--light-yellow);
-}
-
-.text-large {
-}
-
-.text-small {
-}
-
-.uppercase {
-	text-transform: uppercase;
-}
-
-.condensed {
-	font-family: var(--font-secondary);
-}
 
 /*=============================================
 =                  GRID SYSTEM                =
@@ -305,10 +252,6 @@ dd, dt, li {
 
 .flex-end {
 	align-items: flex-end;
-}
-
-.flex-self-stretch {
-	/* align-self: stretch; */
 }
 
 .flex-justify-end {
@@ -372,37 +315,34 @@ dd, dt, li {
 }
 
 /*=============================================
-=               TYPE & DIV BORDERS            =
+=                  DIV BORDERS                =
 =============================================*/
 
-.border-right-blue {
-	border-right: 2px solid;
-	border-image: linear-gradient(to top, transparent 20%, var(--blue) 20%, var(--blue) 80%, transparent 80%) 1;
+.line-horizontal-blue, .line-horizontal-red, .line-horizontal-yellow {
+    height: 2px;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
 }
 
-.border-bottom-blue {
-	border-bottom: 2px solid;
-	border-image: linear-gradient(to right, var(--blue) 50%, transparent 50%) 1;
+.line-vertical-blue, .line-vertical-red, .line-verical-yellow {
+    height: 70%;
+    width: 2px;
+    position: absolute;
+    right: 0;
+    bottom: 15%;
 }
 
-.border-right-red {
-	border-right: 2px solid;
-	border-image: linear-gradient(to top, transparent 20%, var(--red) 20%, var(--red) 80%, transparent 80%) 1;
+.line-horizontal-blue, .line-vertical-blue {
+	background-color: var(--blue);
 }
 
-.border-bottom-red {
-	border-bottom: 2px solid;
-	border-image: linear-gradient(to right, var(--red) 50%, transparent 50%) 1;
+.line-horizontal-red, .line-vertical-red {
+	background-color: var(--red);
 }
 
-.border-right-yellow {
-	border-right: 2px solid;
-	border-image: linear-gradient(to top, transparent 20%, var(--yellow) 20%, var(--yellow) 80%, transparent 80%) 1;
-}
-
-.border-bottom-yellow {
-	border-bottom: 2px solid;
-	border-image: linear-gradient(to right, var(--yellow) 50%, transparent 50%) 1;
+.line-horizontal-yellow, .line-vertical-yellow {
+	background-color: var(--yellow);
 }
 
 /*=============================================
@@ -584,6 +524,7 @@ nav {
 =============================================*/
 
 #section-1 {
+	transition: none;
 	background: url(../img/escs-bg.png) no-repeat 10% 50%;
 }
 
@@ -607,10 +548,31 @@ nav {
 =                 MEDIA QUERIES               =
 =============================================*/
 
+/* --------------- EXCEPTIONS -------------- */
+
+@media screen and (max-width: 1400px) {
+	h1 {
+		font-size: 5.3em;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.navbar a{
+		display: none;
+	}
+	
+	h1 {
+		font-size: 5.1em;
+	}
+	
+	.text-large {
+		font-size: 1.3em;
+	}
+}
+
 /* ------------- LARGE DEVICES ------------- */
 
-@media screen and (max-width: 1200px
-) {
+@media screen and (max-width: 1200px) {
 	/* Grid system */
 	.col-lg-1 {
 		width: calc(100% / 12);
@@ -651,15 +613,27 @@ nav {
 	.col-lg-0 {
 		width: 0;
 	}
+	
+	/* Display */
+	.d-lg-block {display: block;}
+	.d-lg-none {display: none;}
+	
+	/* Flex */
+	.flex-lg-column {flex-direction: column;}
+	
 	/* Type */
 	h1 {
+	}
+	
+	/* Others */
+	.nav-item {
+		font-size: 1em;
 	}
 }
 
 /* ------------- MEDIUM DEVICES ------------ */
 
-@media screen and (max-width: 768px
-) {
+@media screen and (max-width: 768px) {
 	/* Grid system */
 	.col-md-1 {
 		width: calc(100% / 12);
@@ -700,12 +674,40 @@ nav {
 	.col-md-0 {
 		width: 0;
 	}
+	
+	/* Display */
+	.d-md-block {display: block;}
+	.d-md-none {display: none;}
+	
+	/* Flex */
+	.flex-md-column {flex-direction: column;}
+	
+	/* Navbar */
+	nav {padding: 20px;}
+	
+	/* Home - Section 1 */
+	#section-1 h1 {
+		margin: 0;
+		text-align: center;
+	}
+	
+	#section-1 .text-large {
+		font-size: 1.6em;
+	}
+	
+	#section-1 blockquote {
+		text-align: center;
+	}
+	
+	.section-1-cta {
+		justify-content: center !important;
+		margin-top: 20px;
+	}
 }
 
 /* ------------- SMALL DEVICES ------------- */
 
-@media screen and (max-width: 576px
-) {
+@media screen and (max-width: 576px) {
 	/* Grid system */
 	.col-sm-1 {
 		width: calc(100% / 12);
@@ -746,6 +748,13 @@ nav {
 	.col-sm-0 {
 		width: 0;
 	}
+	
+	/* Display */
+	.d-sm-block {display: block;}
+	.d-sm-none {display: none;}
+	
+	/* Flex */
+	.flex-sm-column {flex-direction: column;}
 }
 
 
