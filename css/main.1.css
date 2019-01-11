@@ -488,9 +488,11 @@ nav {
 	font-weight: 700;
 	cursor: pointer;
 	transition: 0.4s;
+	font-size: 1.3em;
+	user-select: none;
 }
 
-.slider-next:hover {
+.slider-next:hover, .slider-prev:hover {
 	opacity: 0.8;
 }
 
@@ -504,8 +506,9 @@ nav {
 }
 
 .btn:hover {
-	color: white;
+	color: white !important;
 	border-color: transparent;
+	opacity: 1;
 }
 
 .btn-hover-blue:hover {
@@ -518,6 +521,7 @@ nav {
 
 .btn-hover-yellow:hover {
 	background-color: var(--yellow);
+	color: white;
 }
 
 /*=============================================
@@ -807,4 +811,6 @@ input[type=checkbox]{
     font-weight: 700;
     cursor: pointer;
     transition: 0.4s;
+    font-size: 1.3em;
+    user-select: none;
 }
