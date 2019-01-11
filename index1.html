@@ -20,14 +20,17 @@
 			<p class="nav-title">Porquê a ESCS?</p>
 		</div>
 		<div class="col-6 flex flex-baseline flex-justify-end navbar">
-			<a href="#section-1" class="nav-item">Home</a>
+			<a href="#section-1" class="nav-item navbar-item-active">Home</a>
 			<a href="#section-2" class="nav-item">Sobre</a>
 			<a href="#section-3" class="nav-item">Resultados</a>
 			<a href="#section-4" class="nav-item">Questionário</a>
 			<a href="#section-5" class="nav-item">Notícias</a>
-			<a href="#section-6" class="nav-item">Feedback</a>
-		
-			<div class="nav-item"><img class="switch" src="img/switch.svg" alt="Light switch"></div>
+			<input type="checkbox" id="switch"></input>
+			<div class="nav-item"><label for="switch">
+				<img class="switch sol" src="img/switch.svg" alt="Light switch">
+				<img class="switch lua" src="img/lua.svg" alt="Light switch">
+				</label>
+			</div>
 		</div>
 	</nav>
 
@@ -48,22 +51,20 @@
 		<div data-section="section-5" data-color="var(--red)" class="sidenav-item">
 			<p class="sidenav-text">05</p>
 		</div>
-		<div data-section="section-6" data-color="var(--light-blue)" class="sidenav-item">
-			<p class="sidenav-text">06</p>
-		</div>
 	</div>
 
 	<!-- HOME -->
-	<section id="section-1" class="slide container flex flex-center">
+	<section data-sectionid="section-1" id="section-1" class="slide container flex flex-center">
 		<div class="col-2 col-lg-1 d-md-none"></div>
 		<div class="flex flex-end">
 			<div class="col-5 col-lg-6 col-md-12 rel">
 				<div class="line-horizontal-blue d-md-none"></div>
 				<h1>
 					Porquê a
-					<div class="text-large rel">ESCS? <div class="line-vertical-blue d-md-none"></div></div>
+					<div class="text-large rel">ESCS? <div class="line-vertical-blue d-md-none"></div>
+					</div>
 				</h1>
-				
+
 				<div class="d-none d-md-block">
 					<blockquote>
 						"Somos uma instituição cada vez mais comprometida e atenta às dinâmicas da academia, do mundo empresarial e da
@@ -72,10 +73,10 @@
 						<span class="text-blue">Presidente da ESCS, Prof. Doutor André Sendin (2018)</span>
 					</blockquote>
 				</div>
-				
+
 				<div class="flex flex-justify-end section-1-cta">
-					<a href="#section-2" class="btn btn-hover-blue text-blue-light">Explorar</a>
-				</div>				
+					<a href="#section-2" id="navegar" class="btn btn-hover-blue text-blue-light">Explorar</a>
+				</div>
 			</div>
 			<div class="col-5 d-md-none">
 				<blockquote>
@@ -89,7 +90,7 @@
 	</section>
 
 	<!-- SOBRE -->
-	<section id="section-2" class="slide container flex flex-center">
+	<section data-sectionid="section-2" id="section-2" class="slide container flex flex-center">
 		<div class="col-1 col-lg-0"></div>
 		<div class="flex-direction-column col-12">
 			<div class="col-6 rel">
@@ -100,7 +101,7 @@
 					</div>
 				</h1>
 			</div>
-			
+
 			<div class="col-9 col-md-12">
 				<p class="condensed">
 					Este estudo tem como objectivo a representação visual de um inquérito feito a alunos e ex alunos sobre quais os
@@ -117,7 +118,7 @@
 	</section>
 
 	<!-- RESULTADOS -->
-	<section id="section-3" class="slide container flex flex-center">
+	<section data-sectionid="section-3" id="section-3" class="slide container flex flex-center">
 		<div class="col-1 col-lg-0"></div>
 		<div class="flex-direction-column col-12 rel">
 			<!-- SLIDER FIXED ELEMENTS -->
@@ -151,13 +152,13 @@
 			<!-- CONTENT 01 -->
 			<div class="graphs">
 				<!-- Deve ter position absolute e muda a opacidade na navegação-->
-				<div data-graph="1" data-sectiontitle="A amostra"  data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph current">
+				<div data-graph="1" data-sectiontitle="A amostra" data-graphcolor="var(--red)" class="flex flex-baseline col-12 graph current">
 					<div class="col-6">
 						CLUSTER FORCE GRAPH
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Género e Idade</h2>
-						<p class="col-8">
+						<p class="col-12">
 							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua
 							mancha gráfica.
 							<br>
@@ -169,13 +170,13 @@
 				</div>
 
 				<!-- CONTENT 02 -->
-				<div data-graph="2" data-sectiontitle="A amostra" data-graphcolor="var(--yellow)"  class="flex flex-baseline col-12 graph" >
+				<div data-graph="2" data-sectiontitle="A amostra" data-graphcolor="var(--yellow)" class="flex flex-baseline col-12 graph">
 					<div class="col-6">
 						BAR GRAPH
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Curso</h2>
-						<p class="col-8">
+						<p class="col-12">
 							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua
 							mancha gráfica.
 							<br>
@@ -187,13 +188,13 @@
 				</div>
 
 				<!-- CONTENT 03 -->
-				<div data-graph="3" data-sectiontitle="Porquê a ESCS?"  data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph" >
+				<div data-graph="3" data-sectiontitle="Porquê a ESCS?" data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph">
 					<div class="col-6">
 						SPIDER CHART
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Motivos de escolha do curso</h2>
-						<p class="col-8">
+						<p class="col-12">
 							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua
 							mancha gráfica.
 							<br>
@@ -205,13 +206,13 @@
 				</div>
 
 				<!-- CONTENT 04 -->
-				<div data-graph="4" data-sectiontitle="Porquê a ESCS?"  data-graphcolor="var(--yellow)" class="flex flex-baseline col-12 graph" >
+				<div data-graph="4" data-sectiontitle="Porquê a ESCS?" data-graphcolor="var(--yellow)" class="flex flex-baseline col-12 graph">
 					<div class="col-6">
 						POLAR CHART
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Motivos de escolha da ESCS</h2>
-						<p class="col-8">
+						<p class="col-12">
 							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua
 							mancha gráfica.
 							<br>
@@ -223,13 +224,13 @@
 				</div>
 
 				<!-- CONTENT 04 -->
-				<div data-graph="5" data-sectiontitle="Porquê a ESCS?"  data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph" >
+				<div data-graph="5" data-sectiontitle="Porquê a ESCS?" data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph">
 					<div class="col-6">
 						DOUGHTNUT CHART
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Características que deverão ser mais privilegiadas na ESCS</h2>
-						<p class="col-8">
+						<p class="col-12">
 							É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua
 							mancha gráfica.
 							<br>
@@ -240,16 +241,20 @@
 					</div>
 				</div>
 			</div>
+			<div id="prev" class="slider-prev text-red-light">
+					&#9664;	Anterior  
+			</div>
 			<!-- SLIDER FIXED ELEMENT -->
 			<div id="next" class="slider-next text-red-light">
-				Seguinte &#9656;
+					 Seguinte &#9654;
 			</div>
+		
 		</div>
 
 	</section>
 
 	<!-- QUESTIONÁRIO -->
-	<section id="section-4" class="slide container flex flex-center">
+	<section data-sectionid="section-4" id="section-4" class="slide container flex flex-center">
 		<div class="col-1 col-lg-0"></div>
 		<div class="flex-direction-column col-12">
 			<div class="col-5 border-bottom-yellow border-right-yellow">
@@ -285,10 +290,7 @@
 	</section>
 
 	<!-- NOTICIAS -->
-	<section id="section-5" class="slide container flex flex-center" style="height: 100%"></section>
-	
-	<!-- FEEDBACK -->
-	<section id="section-6" class="slide container flex flex-center" style="height: 100%"></section>
+	<section data-sectionid="section-5" id="section-5" class="slide container flex flex-center" style="height: 100%"></section>
 
 </body>
 <script src="js/jquery.js"></script>

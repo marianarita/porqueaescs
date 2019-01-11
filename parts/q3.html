@@ -40,40 +40,43 @@
                     labels: labels,
                 },
                 options: {
-                        // Elements options apply to all of the options unless overridden in a dataset
-                        // In this case, we are setting the border of each horizontal bar to be 2px wide
-                        elements: {
-                            rectangle: {
-                                borderWidth: 2,
-                            }
-                        },
-                        responsive: true,
-                        legend: {
-                            position: 'right',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Escolhas'
-                        },
-                        scales: {
-                            xAxes: [{
-                                ticks: {
-                                    beginAtZero: true,
-                                    fixedStepSize: 1
-                                },
-                                
-                            }],
-                            yAxes: [{
-                                gridLines: {
-                                    display: false
-                                },
-                            }]
+                    // Elements options apply to all of the options unless overridden in a dataset
+                    // In this case, we are setting the border of each horizontal bar to be 2px wide
+                    elements: {
+                        rectangle: {
+                            borderWidth: 2,
                         }
+                    },
+                    responsive: true,
+                    legend: {
+                        labels: {
+                            fontColor: "white",
+                            fontSize: 50
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Escolhas'
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                fixedStepSize: 1
+                            },
+
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            },
+                        }]
                     }
+                }
             };
 
             window.onload = function () {
-                var ctx =  $('#canvas')[0].getContext('2d');
+                var ctx = $('#canvas')[0].getContext('2d');
                 window.myHorizontalBar = new Chart(ctx, config);
             };
         </script>

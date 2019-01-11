@@ -127,7 +127,7 @@ section {
 	left: 0;
 	top: 0;
 	width: 100%;
-	background-color: var(--bg-blue);
+	/* background-color: var(--bg-blue); */
 	opacity: 0;
 }
 
@@ -148,7 +148,8 @@ a {
 }
 
 a:hover {
-	color: var(--blue);
+	opacity: .4;
+	/* font-weight: bold; */
 }
 
 
@@ -158,7 +159,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size: 5.625em;
+	font-size: 5.1em;
 	font-weight: 400;
 }
 
@@ -168,7 +169,7 @@ h2 {
 }
 
 h3 {
-	font-size: 2.5em;
+	font-size: 1.5em;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	font-weight: 400;
@@ -408,7 +409,7 @@ nav {
 .sidenav-item {
 	position: relative;
 	width: 20px;
-	height: calc(100vh / 6);
+	height: calc(100vh / 5);
 	background-color: var(--blue);
 	cursor: pointer;
 	transition: 0.4s;
@@ -416,7 +417,7 @@ nav {
 }
 
 .sidenav-item:hover {
-	background-color: var(--bg-blue-light) !important;
+	opacity: .3;
 }
 
 .sidenav-text {
@@ -456,7 +457,7 @@ nav {
 }
 
 .slidernav-item:hover {
-	background-color: var(--bg-blue-light) !important;
+	opacity: .3;
 }
 
 .slidernav-text {
@@ -544,6 +545,9 @@ nav {
 	margin-bottom: 2em;
 }
 
+#section-3 h1{
+	font-size: 5em;
+}
 /*=============================================
 =                 MEDIA QUERIES               =
 =============================================*/
@@ -766,18 +770,41 @@ nav {
 
 .graph {
     position: absolute;
-    background-color: var(--bg-blue);
-	opacity: 0;
-	transition: all .2s ease-in-out;
-
+    /* background-color: var(--bg-blue); */
+    opacity: 0;
+    transition: all .2s ease-in-out;
 }
 
 .graphs {
     position: relative;
-    height: 35vh;
+    height: 40vh;
 }
 
 .current{
 	opacity: 1;
 	transition: all .2s ease-in-out;
+
+}
+input[type=checkbox]{
+	display: none;
+}
+
+
+
+.lua{
+	display: none;
+}
+
+.navbar-item-active{
+	color: white !important;
+}
+
+.slider-prev {
+    position: absolute;
+    bottom: 0;
+    right: 200px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
 }
