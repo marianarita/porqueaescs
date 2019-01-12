@@ -183,7 +183,7 @@ $(document).ready(function () {
         }
     });
     //scroll
-    /*
+    
 	$(window).bind('mousewheel', function(event) {
 		if (event.originalEvent.wheelDelta >= 0) {
 			//alert('Scroll cima');
@@ -192,7 +192,7 @@ $(document).ready(function () {
 			//alert('Scroll baixo');
 			$(".navbar-item-active").next().click();
 		}
-	});*/
+	});
     console.log("%c L(a)INDO!", "font-weight: bold; font-size: 50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)");
 });
 
@@ -784,4 +784,54 @@ $("#switch").change(function () {
         })
     }
 });
+
+
+$.ajax({
+    type: 'GET',
+    url: 'feed.xml',
+    dataType: 'xml',
+    error: function (xhr) {
+        alert('não deu')
+    },
+    success: function (xml) {
+        //console.log(xml);
+        var channel = $('channel', xml).eq(0);
+        //console.log(channel);
+        var items = [];
+        $('item', xml).each(function () {
+            var item = {};
+            item.title = $(this).find('title').eq(0).text();
+            item.link = $(this).find('link').eq(0).text();
+            item.description = $(this).find('description').eq(0).text();
+            item.date = $(this).find('pubDate').eq(0).text();
+            item.image =$(this).find('content\\:encoded')[0].textContent.match(/src="(.*)" alt/)[1]
+            //debugger;
+
+            $('#news-wrapper').append('<div class="news-block-wrapper"><div class="hidden">'+item.image+'</div><div class="news-block" style="background-color: white"> <div class="news-image" style="background-image:url('+item.image +')"> </div> <div class="news-description">' + item.description + ' </div> <a href="' + item.link + '" class="news-readmore" target="_blank">Ler mais</a> </div></div>');
+           
+        });
+
+        $("#news-wrapper > div:gt(0)").hide();
+
+        setInterval(function () {
+            $('#news-wrapper > div:first')
+                fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#news-wrapper');
+        }, 4000);
+
+        /*
+         var i;
+         for (i = 0; i < items.length; ++i) {
+             $('.news-block-wrapper').on('click', function(){
+                 console.log($(this));
+                 $(this).fadeOut(200);
+             })
+         }*/
+
+    }
+})
+
 
