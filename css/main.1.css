@@ -10,6 +10,7 @@
 * 
 */
 
+
 /*=============================================
 =               CUSTOM VARIABLES              =
 =============================================*/
@@ -29,7 +30,6 @@
 	--gray: #595a5c;
 	--bg-blue: #101719;
 	--bg-blue-light: #2a3538;
-
 	/* Type */
 	--font-primary: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	--font-secondary: 'Roboto Condensed', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -38,7 +38,6 @@
 /*=============================================
 =                     FONTS                   =
 =============================================*/
-
 @font-face {
 	font-family: 'Roboto';
 	src: url('../fonts/Roboto-Bold.eot');
@@ -98,13 +97,13 @@
 /*=============================================
 =                     RESET                   =
 =============================================*/
-
 * {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
 	width: 100%;
 }
 
@@ -132,7 +131,6 @@ section {
 }
 
 /* ------------ SCROLLBAR HIDE ------------- */
-
 ::-webkit-scrollbar {
 	display: none;
 }
@@ -152,8 +150,10 @@ a:hover {
 	/* font-weight: bold; */
 }
 
-
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
 	margin-top: 0;
 	transition: 0.3s;
 }
@@ -176,10 +176,11 @@ h3 {
 }
 
 h4 {
-	font-size: 1.5625em;
+	font-size: 1.4em;
 }
 
-p, blockquote {
+p,
+blockquote {
 	font-size: 1.125em;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -193,48 +194,91 @@ blockquote {
 	font-family: var(--font-secondary);
 }
 
-dl, ol, ul {
+dl,
+ol,
+ul {
 	font-size: 1em;
 	margin: 0 0 2.4em;
 	padding: 0;
 }
 
-dd, dt, li {
+dd,
+dt,
+li {
 	line-height: 2.4;
 	margin: 0;
 }
 
-
 /*=============================================
 =                    HELPER                   =
 =============================================*/
+.d-block {
+	display: block;
+}
 
-.d-block {display: block;}
-.d-none {display: none;}
-.margin-center {margin: 0 auto;}
-.rel {position: relative;}
+.d-none {
+	display: none;
+}
 
-.text-center {text-align: center;}
-.text-right {text-align: right;}
+.margin-center {
+	margin: 0 auto;
+}
 
-.text-blue {color: var(--blue);}
-.text-blue-light {color: var(--light-blue);}
-.text-red {color: var(--red);}
-.text-red-light {color: var(--light-red);}
-.text-yellow {color: var(--yellow);}
-.text-yellow-light {color: var(--light-yellow);}
+.rel {
+	position: relative;
+}
 
-.text-large {font-size: 1.65em;}
-.text-small {font-size: 0.5em;}
+.text-center {
+	text-align: center;
+}
 
-.uppercase {text-transform: uppercase;}
-.condensed {font-family: var(--font-secondary);}
+.text-right {
+	text-align: right;
+}
 
+.text-blue {
+	color: var(--blue);
+}
+
+.text-blue-light {
+	color: var(--light-blue);
+}
+
+.text-red {
+	color: var(--red);
+}
+
+.text-red-light {
+	color: var(--light-red);
+}
+
+.text-yellow {
+	color: var(--yellow);
+}
+
+.text-yellow-light {
+	color: var(--light-yellow);
+}
+
+.text-large {
+	font-size: 1.65em;
+}
+
+.text-small {
+	font-size: 0.9em;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.condensed {
+	font-family: var(--font-secondary);
+}
 
 /*=============================================
 =                  GRID SYSTEM                =
 =============================================*/
-
 .container {
 	padding: 20px;
 }
@@ -311,45 +355,97 @@ dd, dt, li {
 	width: 100%;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12 {
 	padding: 0px 12px;
 }
 
 /*=============================================
 =                  DIV BORDERS                =
 =============================================*/
-
-.line-horizontal-blue, .line-horizontal-red, .line-horizontal-yellow {
-    height: 2px;
-    width: 40%;
-    position: absolute;
-    bottom: 0;
+.line-horizontal-blue,
+.line-horizontal-red,
+.line-horizontal-yellow {
+	height: 2px;
+	width: 40%;
+	position: absolute;
+	bottom: 0;
 }
 
-.line-vertical-blue, .line-vertical-red, .line-verical-yellow {
-    height: 70%;
-    width: 2px;
-    position: absolute;
-    right: 0;
-    bottom: 15%;
+.line-vertical-blue,
+.line-vertical-red,
+.line-vertical-yellow {
+	height: 70%;
+	width: 2px;
+	position: absolute;
+	right: 0;
+	bottom: 15%;
 }
 
-.line-horizontal-blue, .line-vertical-blue {
+.line-horizontal-blue,
+.line-vertical-blue {
 	background-color: var(--blue);
 }
 
-.line-horizontal-red, .line-vertical-red {
+.line-horizontal-red,
+.line-vertical-red {
 	background-color: var(--red);
 }
 
-.line-horizontal-yellow, .line-vertical-yellow {
+.line-horizontal-yellow,
+.line-vertical-yellow {
 	background-color: var(--yellow);
 }
 
 /*=============================================
 =                    NAV BAR                  =
 =============================================*/
-
 nav {
 	width: 100vw;
 	position: fixed;
@@ -364,7 +460,8 @@ nav {
 	max-width: 48px;
 }
 
-.nav-title, .nav-item {
+.nav-title,
+.nav-item {
 	align-self: flex-start;
 	padding: 32px 10px 0px;
 	text-transform: uppercase;
@@ -397,7 +494,6 @@ nav {
 /*=============================================
 =             SIDE PROGRESS/NAV BAR           =
 =============================================*/
-
 .sidenav {
 	width: 20px;
 	position: fixed;
@@ -426,22 +522,20 @@ nav {
 	bottom: 0;
 	opacity: 0;
 	transition: all .2s ease;
-
 }
 
 .sidenav-active {
 	opacity: .5;
 }
 
-
-.sidenav-active .sidenav-text{
+.sidenav-active .sidenav-text {
 	opacity: 1;
 	transition: all .2s ease;
 }
+
 /*=============================================
 =               SLIDER NAVIGATION             =
 =============================================*/
-
 .slidernav {
 	height: 20px;
 }
@@ -474,7 +568,6 @@ nav {
 	opacity: .5;
 }
 
-
 .slidernav-active .slidernav-text {
 	opacity: 1;
 	transition: all .2s ease;
@@ -492,14 +585,14 @@ nav {
 	user-select: none;
 }
 
-.slider-next:hover, .slider-prev:hover {
+.slider-next:hover,
+.slider-prev:hover {
 	opacity: 0.8;
 }
 
 /*=============================================
 =                    BUTTONS                  =
 =============================================*/
-
 .btn {
 	padding: 15px 45px;
 	border: 2px solid white;
@@ -527,58 +620,50 @@ nav {
 /*=============================================
 =                   SECTIONS                  =
 =============================================*/
-
 #section-1 {
 	transition: none;
 	background: url(../img/escs-bg.png) no-repeat 10% 50%;
-}
-
-#section-2 h1, #section-3 h1, #section-4 h1 {
-	margin: 0.3em 0;
 }
 
 #section-2 p {
 	margin: 2em 0;
 }
 
-#section-3 p, #section-4 p {
+#section-3 h1 {
+	margin-bottom: 0.3em;
+}
+
+#section-2 h1,
+#section-4 h1,
+#section-5 h1 {
+	padding-bottom: 0.3em;
+}
+
+#section-3 p,
+#section-4 p {
 	font-weight: 300;
+}
+
+#section-3 h1,
+#section-4 h1 {
+	font-size: 4.5em;
 }
 
 #section-4 h3 {
 	margin-bottom: 2em;
 }
 
-#section-3 h1{
-	font-size: 5em;
-}
 /*=============================================
 =                 MEDIA QUERIES               =
 =============================================*/
 
-/* --------------- EXCEPTIONS -------------- */
+/* ------------- LARGE DEVICES ------------- */
 
 @media screen and (max-width: 1400px) {
 	h1 {
 		font-size: 5.3em;
 	}
 }
-
-@media screen and (max-width: 1000px) {
-	.navbar a{
-		display: none;
-	}
-	
-	h1 {
-		font-size: 5.1em;
-	}
-	
-	.text-large {
-		font-size: 1.3em;
-	}
-}
-
-/* ------------- LARGE DEVICES ------------- */
 
 @media screen and (max-width: 1200px) {
 	/* Grid system */
@@ -621,23 +706,48 @@ nav {
 	.col-lg-0 {
 		width: 0;
 	}
-	
+
 	/* Display */
-	.d-lg-block {display: block;}
-	.d-lg-none {display: none;}
-	
-	/* Flex */
-	.flex-lg-column {flex-direction: column;}
-	
-	/* Type */
-	h1 {
+	.d-lg-block {
+		display: block;
 	}
-	
+	.d-lg-none {
+		display: none;
+	}
+
+	/* Type */
+	#section-3 h1,
+	#section-4 h1 {
+		font-size: 4em;
+	}
+
 	/* Others */
 	.nav-item {
 		font-size: 1em;
 	}
 }
+
+@media screen and (max-width: 1000px) {
+	.navbar a {
+		display: none;
+	}
+	h1 {
+		font-size: 5.1em;
+	}
+	.text-large {
+		font-size: 1.3em;
+	}
+	#section-3 h1 {
+		font-size: 3.5em;
+	}
+	#section-4 h1 {
+		font-size: 3em;
+	}
+	.flex-md-wrap {
+		flex-wrap: nowrap;
+	}
+}
+
 
 /* ------------- MEDIUM DEVICES ------------ */
 
@@ -682,36 +792,63 @@ nav {
 	.col-md-0 {
 		width: 0;
 	}
-	
+
 	/* Display */
-	.d-md-block {display: block;}
-	.d-md-none {display: none;}
-	
+	.d-md-block {
+		display: block;
+	}
+	.d-md-none {
+		display: none;
+	}
+
 	/* Flex */
-	.flex-md-column {flex-direction: column;}
-	
+	.flex-md-wrap {
+		flex-wrap: wrap;
+	}
+
 	/* Navbar */
-	nav {padding: 20px;}
-	
-	/* Home - Section 1 */
-	#section-1 h1 {
-		margin: 0;
-		text-align: center;
+	nav {
+		padding: 20px;
 	}
-	
-	#section-1 .text-large {
-		font-size: 1.6em;
+
+	/* Sections */
+	section {
+		padding-left: 0 !important;
 	}
-	
-	#section-1 blockquote {
-		text-align: center;
-	}
-	
-	.section-1-cta {
-		justify-content: center !important;
-		margin-top: 20px;
-	}
+		/* Home - Section 1 */
+			#section-1 h1 {
+				margin: 0;
+				text-align: center;
+			}
+			#section-1 .text-large {
+				font-size: 1.6em;
+			}
+			#section-1 blockquote {
+				text-align: center;
+			}
+			.section-1-cta {
+				justify-content: center !important;
+				margin-top: 20px;
+			}
+		/* Results - Section 3 */
+			#section-3 .slidernav {
+				margin-top: 40px;
+			}
+			.graphs {
+				height: 50vh;
+				margin-top: 20px;
+			}
+			#section-3 h2 {
+				margin-top: 20px;
+			}
+		/* Form - Section 4 */
+			#section-4 h4 {
+				margin-top: 60px;
+				padding-top: 20px;
+				border-top: 1px solid white;
+			}
 }
+
 
 /* ------------- SMALL DEVICES ------------- */
 
@@ -756,66 +893,68 @@ nav {
 	.col-sm-0 {
 		width: 0;
 	}
-	
+
 	/* Display */
-	.d-sm-block {display: block;}
-	.d-sm-none {display: none;}
+	.d-sm-block {
+		display: block;
+	}
+	.d-sm-none {
+		display: none;
+	}
 	
-	/* Flex */
-	.flex-sm-column {flex-direction: column;}
+	/* Type */
+	h1 {
+		font-size: 4em;
+	}
 }
 
-
-.visible{
+.visible {
 	opacity: 1;
 	z-index: 97;
 }
 
-
 .graph {
-    position: absolute;
-    /* background-color: var(--bg-blue); */
-    opacity: 0;
-    transition: all .2s ease-in-out;
+	position: absolute;
+	/* background-color: var(--bg-blue); */
+	opacity: 0;
+	transition: all .2s ease-in-out;
 }
 
 .graphs {
-    position: relative;
-    height: 40vh;
+	position: relative;
+	height: 40vh;
 }
 
-.current{
+.current {
 	opacity: 1;
 	transition: all .2s ease-in-out;
-
 }
-input[type=checkbox]{
+
+input[type=checkbox] {
 	display: none;
 }
 
-
-
-.lua{
+.lua {
 	display: none;
 }
 
-.navbar-item-active{
+.navbar-item-active {
 	color: white !important;
 }
 
 .slider-prev {
-    position: absolute;
-    bottom: 0;
-    right: 200px;
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.4s;
-    font-size: 1.3em;
-    user-select: none;
+	position: absolute;
+	bottom: 0;
+	right: 200px;
+	font-family: var(--font-secondary);
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.4s;
+	font-size: 1.3em;
+	user-select: none;
 }
 
-.nav-item-switch{
+.nav-item-switch {
 	align-self: flex-start;
 	padding: 32px 10px 0px;
 	text-transform: uppercase;
