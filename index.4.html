@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        a:focus {
+            color: blue
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">First Link</a>
+    <a href="#">Second Link</a>
+    <a href="#">Third Link</a>
+    <a href="#">Fourth Link</a>
+    <a href="#">Fifth Link</a>
+    <a href="#">Sixt Link</a>
+</body>
+<script>
+    $(document).keydown(
+        function (e) {
+            if (e.keyCode == 39) {
+                $("a:focus").next().focus();
+            }
+            if (e.keyCode == 37) {
+                $("a:focus").prev().focus();
+            }
+        }
+    );
+
+    $(window).bind('mousewheel', function (event) {
+        if (event.originalEvent.wheelDelta >= 0) {
+            alert('Scroll up');
+        } else {
+            alert('Scroll down');
+        }
+    });
+</script>
+
+</html>
