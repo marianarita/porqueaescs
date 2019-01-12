@@ -45,7 +45,7 @@ $(document).ready(function () {
 
     //Mexer o logo
     var factor = 150;
-    $("#section-1").mousemove(function (e) {
+    $(".section-1-bg").mousemove(function (e) {
         var width = $(this).innerWidth();
         var height = $(this).innerHeight();
         var newX = 10 - (e.pageX - width / 2) / factor;
@@ -120,6 +120,7 @@ $(document).ready(function () {
                 $('.lua').fadeIn()
             });
             $('.nav-logo').css({ filter: 'invert(100)' })
+            $('.section-1-bg').css({ filter:'invert(100)' })
         } else {
             $('h1, h2, h3, h4, h5, h6').css({ color: 'white' })
             $('h2').css({ color: 'white' })
@@ -131,6 +132,7 @@ $(document).ready(function () {
                 $('.sol').fadeIn()
             });
             $('.nav-logo').css({ filter: 'invert(0)' })
+            $('.section-1-bg').css({ filter:'invert(0)' })
         }
     });
 
