@@ -59,11 +59,11 @@ $result = mysqli_fetch_assoc($results);
 <body>
 	<!-- TOP NAVBAR -->
 	<nav class="flex">
-		<div class="col-6 flex flex-baseline">
+		<div class="col-6 col-md-12 flex flex-baseline">
 			<img class="nav-logo" src="img/escs-nav.svg" alt="Logótipo ESCS">
 			<p class="nav-title">Porquê a ESCS?</p>
 		</div>
-		<div class="col-6 flex flex-baseline flex-justify-end navbar">
+		<div class="col-6 col-sm-3 flex flex-baseline flex-justify-end navbar">
 			<a href="#section-1" class="nav-item navbar-item-active">Home</a>
 			<a href="#section-2" class="nav-item">Sobre</a>
 			<a href="#section-3" class="nav-item">Resultados</a>
@@ -202,7 +202,7 @@ $result = mysqli_fetch_assoc($results);
 			<div class="graphs">
 				<!-- Deve ter position absolute e muda a opacidade na navegação-->
 				<div data-graph="1" data-sectiontitle="A amostra" data-graphcolor="var(--red)" class="flex flex-baseline col-12 graph current">
-					<div class="col-6">
+					<div class="col-6 col-md-12">
 							<div id="q1-2">
 								</div>
 					</div>
@@ -216,7 +216,7 @@ $result = mysqli_fetch_assoc($results);
 
 				<!-- CONTENT 02 -->
 				<div data-graph="2" data-sectiontitle="A amostra" data-graphcolor="var(--yellow)" class="flex flex-baseline col-12 graph">
-					<div class="col-6">
+					<div class="col-6 col-md-12">
 						<div class="graph-wrapper">
 							<canvas id="q3"></canvas>
 						</div>
@@ -231,7 +231,7 @@ $result = mysqli_fetch_assoc($results);
 
 				<!-- CONTENT 03 -->
 				<div data-graph="3" data-sectiontitle="Porquê a ESCS?" data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph">
-					<div class="col-6">
+					<div class="col-6 col-md-12">
 						<div class="graph-wrapper">
 							<canvas id="q4"></canvas>
 						</div>
@@ -247,7 +247,7 @@ $result = mysqli_fetch_assoc($results);
 
 				<!-- CONTENT 04 -->
 				<div data-graph="4" data-sectiontitle="Porquê a ESCS?" data-graphcolor="var(--yellow)" class="flex flex-baseline col-12 graph">
-					<div class="col-6">
+					<div class="col-6 col-md-12">
 							<div class="graph-wrapper">
 									<canvas id="q5"></canvas>
 								</div>
@@ -270,7 +270,7 @@ $result = mysqli_fetch_assoc($results);
 					<div class="col-6 col-md-12">
 						<h2 class="uppercase">Características que deverão ser mais privilegiadas na ESCS</h2>
 						<p>
-								Por fim pedimos para indicar as 3 características que deverão ser mais privilegiadas na ESCS para apurar aquilo que para os alunos é mais importante. A informação recolhida no gráfico é apresentada da seguinte forma: A cada cor corresponde uma das opções de escolha, o tamanho de cada parte preenchida por essa cor corresponde ao número de vezes que essa opção foi selecionada, quanto maior for a quantidade de cor, maior é o número de escolhas dessa opção.
+								Por fim, pedimos para indicar as 3 características que deverão ser mais privilegiadas na ESCS para apurar aquilo que para os alunos é mais importante. A informação recolhida no gráfico é apresentada da seguinte forma: A cada cor corresponde uma das opções de escolha, o tamanho de cada parte preenchida por essa cor corresponde ao número de vezes que essa opção foi selecionada, quanto maior for a quantidade de cor, maior é o número de escolhas dessa opção.
 						</p>
 					</div>
 				</div>
