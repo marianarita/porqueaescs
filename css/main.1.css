@@ -29,7 +29,6 @@
 	--gray: #595a5c;
 	--bg-blue: #101719;
 	--bg-blue-light: #2a3538;
-
 	/* Type */
 	--font-primary: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	--font-secondary: 'Roboto Condensed', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -131,6 +130,12 @@ section {
 	opacity: 0;
 }
 
+.visible {
+	opacity: 1;
+	z-index: 97;
+}
+
+
 /* ------------ SCROLLBAR HIDE ------------- */
 
 ::-webkit-scrollbar {
@@ -140,6 +145,7 @@ section {
 /*=============================================
 =                     TYPE                    =
 =============================================*/
+
 a {
 	text-decoration: none;
 	color: var(--light-blue);
@@ -151,7 +157,6 @@ a:hover {
 	opacity: .4;
 	/* font-weight: bold; */
 }
-
 
 h1, h2, h3, h4 {
 	margin-top: 0;
@@ -204,32 +209,73 @@ dd, dt, li {
 	margin: 0;
 }
 
-
 /*=============================================
 =                    HELPER                   =
 =============================================*/
 
-.d-block {display: block;}
-.d-none {display: none;}
-.margin-center {margin: 0 auto;}
-.rel {position: relative;}
+.d-block {
+	display: block;
+}
 
-.text-center {text-align: center;}
-.text-right {text-align: right;}
+.d-none {
+	display: none;
+}
 
-.text-blue {color: var(--blue);}
-.text-blue-light {color: var(--light-blue);}
-.text-red {color: var(--red);}
-.text-red-light {color: var(--light-red);}
-.text-yellow {color: var(--yellow);}
-.text-yellow-light {color: var(--light-yellow);}
+.margin-center {
+	margin: 0 auto;
+}
 
-.text-large {font-size: 1.65em;}
-.text-small {font-size: 0.5em;}
+.rel {
+	position: relative;
+}
 
-.uppercase {text-transform: uppercase;}
-.condensed {font-family: var(--font-secondary);}
+.text-center {
+	text-align: center;
+}
 
+.text-right {
+	text-align: right;
+}
+
+.text-blue {
+	color: var(--blue);
+}
+
+.text-blue-light {
+	color: var(--light-blue);
+}
+
+.text-red {
+	color: var(--red);
+}
+
+.text-red-light {
+	color: var(--light-red);
+}
+
+.text-yellow {
+	color: var(--yellow);
+}
+
+.text-yellow-light {
+	color: var(--light-yellow);
+}
+
+.text-large {
+	font-size: 1.65em;
+}
+
+.text-small {
+	font-size: 0.5em;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.condensed {
+	font-family: var(--font-secondary);
+}
 
 /*=============================================
 =                  GRID SYSTEM                =
@@ -320,18 +366,18 @@ dd, dt, li {
 =============================================*/
 
 .line-horizontal-blue, .line-horizontal-red, .line-horizontal-yellow {
-    height: 2px;
-    width: 40%;
-    position: absolute;
-    bottom: 0;
+	height: 2px;
+	width: 40%;
+	position: absolute;
+	bottom: 0;
 }
 
 .line-vertical-blue, .line-vertical-red, .line-verical-yellow {
-    height: 70%;
-    width: 2px;
-    position: absolute;
-    right: 0;
-    bottom: 15%;
+	height: 70%;
+	width: 2px;
+	position: absolute;
+	right: 0;
+	bottom: 15%;
 }
 
 .line-horizontal-blue, .line-vertical-blue {
@@ -390,9 +436,31 @@ nav {
 	cursor: pointer;
 }
 
+.nav-item-switch {
+	align-self: flex-start;
+	padding: 32px 10px 0px;
+	text-transform: uppercase;
+}
+
 .switch:hover {
 	opacity: 0.8;
 }
+
+
+input[type=checkbox] {
+	display: none;
+}
+
+.lua {
+	display: none;
+}
+
+.navbar-item-active {
+	color: white !important;
+}
+
+
+
 
 /*=============================================
 =             SIDE PROGRESS/NAV BAR           =
@@ -426,18 +494,17 @@ nav {
 	bottom: 0;
 	opacity: 0;
 	transition: all .2s ease;
-
 }
 
 .sidenav-active {
 	opacity: .5;
 }
 
-
-.sidenav-active .sidenav-text{
+.sidenav-active .sidenav-text {
 	opacity: 1;
 	transition: all .2s ease;
 }
+
 /*=============================================
 =               SLIDER NAVIGATION             =
 =============================================*/
@@ -474,11 +541,22 @@ nav {
 	opacity: .5;
 }
 
-
 .slidernav-active .slidernav-text {
 	opacity: 1;
 	transition: all .2s ease;
 }
+.slider-prev {
+	position: absolute;
+	bottom: 0;
+	right: 200px;
+	font-family: var(--font-secondary);
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.4s;
+	font-size: 1.3em;
+	user-select: none;
+}
+
 
 .slider-next {
 	position: absolute;
@@ -495,6 +573,29 @@ nav {
 .slider-next:hover, .slider-prev:hover {
 	opacity: 0.8;
 }
+
+.graph {
+	position: absolute;
+	/* background-color: var(--bg-blue); */
+	opacity: 0;
+	transition: all .2s ease-in-out;
+}
+
+.graphs {
+	position: relative;
+	height: 40vh;
+	overflow: visible;
+}
+
+.current {
+	opacity: 1;
+	transition: all .2s ease-in-out;
+	z-index: 96;
+	overflow: visible;
+}
+
+
+
 
 /*=============================================
 =                    BUTTONS                  =
@@ -549,9 +650,10 @@ nav {
 	margin-bottom: 2em;
 }
 
-#section-3 h1{
+#section-3 h1 {
 	font-size: 5em;
 }
+
 /*=============================================
 =                 MEDIA QUERIES               =
 =============================================*/
@@ -565,14 +667,12 @@ nav {
 }
 
 @media screen and (max-width: 1000px) {
-	.navbar a{
+	.navbar a {
 		display: none;
 	}
-	
 	h1 {
 		font-size: 5.1em;
 	}
-	
 	.text-large {
 		font-size: 1.3em;
 	}
@@ -621,18 +721,19 @@ nav {
 	.col-lg-0 {
 		width: 0;
 	}
-	
 	/* Display */
-	.d-lg-block {display: block;}
-	.d-lg-none {display: none;}
-	
-	/* Flex */
-	.flex-lg-column {flex-direction: column;}
-	
-	/* Type */
-	h1 {
+	.d-lg-block {
+		display: block;
 	}
-	
+	.d-lg-none {
+		display: none;
+	}
+	/* Flex */
+	.flex-lg-column {
+		flex-direction: column;
+	}
+	/* Type */
+	h1 {}
 	/* Others */
 	.nav-item {
 		font-size: 1em;
@@ -682,31 +783,32 @@ nav {
 	.col-md-0 {
 		width: 0;
 	}
-	
 	/* Display */
-	.d-md-block {display: block;}
-	.d-md-none {display: none;}
-	
+	.d-md-block {
+		display: block;
+	}
+	.d-md-none {
+		display: none;
+	}
 	/* Flex */
-	.flex-md-column {flex-direction: column;}
-	
+	.flex-md-column {
+		flex-direction: column;
+	}
 	/* Navbar */
-	nav {padding: 20px;}
-	
+	nav {
+		padding: 20px;
+	}
 	/* Home - Section 1 */
 	#section-1 h1 {
 		margin: 0;
 		text-align: center;
 	}
-	
 	#section-1 .text-large {
 		font-size: 1.6em;
 	}
-	
 	#section-1 blockquote {
 		text-align: center;
 	}
-	
 	.section-1-cta {
 		justify-content: center !important;
 		margin-top: 20px;
@@ -756,67 +858,85 @@ nav {
 	.col-sm-0 {
 		width: 0;
 	}
-	
 	/* Display */
-	.d-sm-block {display: block;}
-	.d-sm-none {display: none;}
-	
+	.d-sm-block {
+		display: block;
+	}
+	.d-sm-none {
+		display: none;
+	}
 	/* Flex */
-	.flex-sm-column {flex-direction: column;}
+	.flex-sm-column {
+		flex-direction: column;
+	}
+}
+
+/*=============================================
+=                GRAFICO Q1-2                =
+=============================================*/
+
+
+.my-tooltip {
+	overflow: visible;
+	position: absolute;
+	padding: 6px;
+	/* margin: 1em 0 3em; */
+	color: white;
+	background: #000000cc;
+	border-radius: 6px;
+	font-size: 12px;
+	z-index: 100;
+	width: 300px;
+}
+
+.my-tooltip:after {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: 5px;
+	border-width: 5px 5px 0;
+	border-style: solid;
+	border-color: #000000cc transparent;
+	display: block;
+	width: 0;
+	transform: rotate(180deg);
+}
+
+div#tooltip-title {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+div#tooltip-text {
+	font-size: 14px;
+}
+
+div#q1-2 {
+	position: absolute;
+	overflow: visible;
+}
+
+svg.canvas-q1 {
+	overflow: visible;
 }
 
 
-.visible{
-	opacity: 1;
-	z-index: 97;
+circle {
+	cursor: move;
+	cursor: grab;
 }
 
+text {
+	fill: white;
+	cursor: move;
+	cursor: grab;
+}
+/*=====  End of GRAFICO Q1-2  ======*/
 
-.graph {
+.graph-wrapper {
     position: absolute;
-    /* background-color: var(--bg-blue); */
-    opacity: 0;
-    transition: all .2s ease-in-out;
-}
-
-.graphs {
-    position: relative;
-    height: 40vh;
-}
-
-.current{
-	opacity: 1;
-	transition: all .2s ease-in-out;
-
-}
-input[type=checkbox]{
-	display: none;
-}
-
-
-
-.lua{
-	display: none;
-}
-
-.navbar-item-active{
-	color: white !important;
-}
-
-.slider-prev {
-    position: absolute;
-    bottom: 0;
-    right: 200px;
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.4s;
-    font-size: 1.3em;
-    user-select: none;
-}
-
-.nav-item-switch{
-	align-self: flex-start;
-	padding: 32px 10px 0px;
-	text-transform: uppercase;
+    top: 0;
+    left: 0;
+    width: 550px;
+    height: 400px;
 }

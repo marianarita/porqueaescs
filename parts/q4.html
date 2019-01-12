@@ -7,8 +7,8 @@
 </head>
 
 <body>
-    <div id="container" style="width: 75%;">
-        <canvas id="canvas"></canvas>
+    <div id="container" style="width: 100%;">
+        <canvas id="q4"></canvas>
         <script>
             /* CHAMADA AJAX GUARDADA NUMA VAR*/
             var results = $.ajax({
@@ -35,12 +35,13 @@
                     datasets: [{
                         data: data,
                         borderWidth: 4,
-                        backgroundColor: "rgba(0, 119, 204, 0.3)",
-                        borderColor: 'rgba(0, 119, 204, 1)',
-                        pointBackgroundColor: "rgba(179,181,198,1)",
-                        pointBorderColor: "#fff",
+                        backgroundColor: "rgb(233, 166, 13)",
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        pointBackgroundColor: "#ffbe3b",
+                        pointBorderColor: "#ffbe3b",
                         pointHoverBackgroundColor: "#fff",
                         pointHoverBorderColor: "rgba(179,181,198,1)",
+						pointRadius: 4,
                     }],
                     labels: labels,
                 },
@@ -50,21 +51,29 @@
                         spanGaps: false,
                         elements: {
                             line: {
-                                tension: 0.000001
+                                tension: 0.0000001
                             }
                         },
                         legend: {
+							display: false,
                             position: 'right',
                         },
                         title: {
-                            display: true,
+                            display: false,
                             text: 'Radar'
                         },
                         scale: {
                             ticks: {
-                                beginAtZero: true
+                                beginAtZero: true,
+								fontColor: '#ffffff' // AQUI É A COR
                             },
-                            reverse: false
+							pointLabels: {
+								fontColor: '#ffffff' // AQUI É A COR
+							},
+                            reverse: false,
+							gridLines: {
+								circular: true
+							}
                         },
                         animation: {
                             animateRotate: false,
@@ -74,7 +83,7 @@
             };
 
             window.onload = function () {
-                var ctx =  $('#canvas')[0].getContext('2d');
+                var ctx =  $('#q4')[0].getContext('2d');
                 window.myRadar = new Chart(ctx, config);
             };
         </script>

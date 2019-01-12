@@ -8,10 +8,10 @@
 
 <body>
     <div id="container" style="width: 75%;">
-        <canvas id="canvas"></canvas>
+        <canvas id="q5"></canvas>
         <script>
             /* CHAMADA AJAX GUARDADA NUMA VAR*/
-            var results = $.ajax({
+            var resultsQ5 = $.ajax({
                 type: 'GET',
                 url: 'q5.php',
                 data: { variable: 'value' },
@@ -21,10 +21,10 @@
 
 
             /* PROCESSAMENTO DO OBJETO PARA FILTRAR ALGUNS RESULTADOS */
-            var labels = results.map(function (e) {
+            var labels = resultsQ5.map(function (e) {
                 return e.answer_text;
             });
-            var data = results.map(function (e) {
+            var data = resultsQ5.map(function (e) {
                 return e.answer_value;
             });
 
@@ -33,8 +33,8 @@
                 data: {
                     datasets: [{
                         data: data,
-                        borderWidth: 4,
-                        backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"],
+                        borderWidth: 2,
+                        backgroundColor: ["#e9a60d", "#ef6f6f", "#007382", "#be1428", "#023e44", "#ffc76c", "#3caab4", "#001f3f", "#e9a60d", "#ef6f6f", "#007382", "#be1428", "#023e44", "#ffc76c", "#e9a60d"],
                     }],
                     labels: labels,
                 },
@@ -42,14 +42,17 @@
                         responsive: true,
                         legend: {
                             position: 'right',
+							labels: {
+								fontColor: '#ffffff'	
+							}
                         },
                         title: {
-                            display: true,
-                            text: 'Chart.js Polar Area Chart'
+                            display: true
                         },
                         scale: {
                             ticks: {
-                                beginAtZero: true
+                                beginAtZero: true,
+								fontColor: '#fffffff' // AQUI É A COR
                             },
                             reverse: false
                         },
@@ -61,7 +64,7 @@
             };
 
             window.onload = function () {
-                var ctx =  $('#canvas')[0].getContext('2d');
+                var ctx =  $('#q5')[0].getContext('2d');
                 window.myPolarArea = Chart.PolarArea(ctx, config);
             };
         </script>

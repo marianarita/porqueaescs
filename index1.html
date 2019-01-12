@@ -188,7 +188,8 @@
 				<!-- Deve ter position absolute e muda a opacidade na navegação-->
 				<div data-graph="1" data-sectiontitle="A amostra" data-graphcolor="var(--red)" class="flex flex-baseline col-12 graph current">
 					<div class="col-6">
-						CLUSTER FORCE GRAPH
+							<div id="q1-2">
+								</div>
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Género e Idade</h2>
@@ -206,7 +207,9 @@
 				<!-- CONTENT 02 -->
 				<div data-graph="2" data-sectiontitle="A amostra" data-graphcolor="var(--yellow)" class="flex flex-baseline col-12 graph">
 					<div class="col-6">
-						BAR GRAPH
+						<div class="graph-wrapper">
+							<canvas id="q3"></canvas>
+						</div>
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Curso</h2>
@@ -224,7 +227,9 @@
 				<!-- CONTENT 03 -->
 				<div data-graph="3" data-sectiontitle="Porquê a ESCS?" data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph">
 					<div class="col-6">
-						SPIDER CHART
+						<div class="graph-wrapper">
+							<canvas id="q4"></canvas>
+						</div>
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Motivos de escolha do curso</h2>
@@ -242,7 +247,9 @@
 				<!-- CONTENT 04 -->
 				<div data-graph="4" data-sectiontitle="Porquê a ESCS?" data-graphcolor="var(--yellow)" class="flex flex-baseline col-12 graph">
 					<div class="col-6">
-						POLAR CHART
+							<div class="graph-wrapper">
+									<canvas id="q5"></canvas>
+								</div>
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Motivos de escolha da ESCS</h2>
@@ -260,7 +267,9 @@
 				<!-- CONTENT 04 -->
 				<div data-graph="5" data-sectiontitle="Porquê a ESCS?" data-graphcolor="var(--light-blue)" class="flex flex-baseline col-12 graph">
 					<div class="col-6">
-						DOUGHTNUT CHART
+							<div class="graph-wrapper">
+									<canvas id="q6"></canvas>
+								</div>
 					</div>
 					<div class="col-6">
 						<h2 class="uppercase">Características que deverão ser mais privilegiadas na ESCS</h2>
@@ -328,7 +337,10 @@
 
 </body>
 <script src="js/jquery.js"></script>
-<script src="js/chart.js"></script>
+<script type="text/javascript" src=" https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.8/d3.min.js"></script>
+<script type="text/javascript" src="https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
+<script type="text/javascript" src=" https://www.chartjs.org/samples/latest/utils.js"></script>
 <script src="js/main.js"></script>
 
 </html>

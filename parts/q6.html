@@ -8,7 +8,7 @@
 
 <body>
     <div id="container" style="width: 75%;">
-        <canvas id="canvas"></canvas>
+        <canvas id="q6"></canvas>
         <script>
             /* CHAMADA AJAX GUARDADA NUMA VAR*/
             var results = $.ajax({
@@ -34,18 +34,20 @@
                 data: {
                     datasets: [{
                         data: data,
-                        backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"],
+                        backgroundColor: ["#8c1010", "#e9a60d", "#ef6f6f", "#007382", "#896628", "#be1428", "#6a8f91", "#023e44", "#ffc76c", "#3caab4", "#3d000c", "#002b2b", "#ba6a00", "#b78a8a", "#964040", "#586c6d", "#be1428", "#9bc4c4", "#b29569"],
                     }],
                     labels: labels,
                 },
                 options: {
                     responsive: true,
                     legend: {
-                        position: 'top',
+                        position: 'bottom',
+						labels: {
+							fontColor: '#ffffff'
+						}
                     },
                     title: {
-                        display: true,
-                        text: 'Chart.js Doughnut Chart'
+                        display: false
                     },
                     animation: {
                         animateScale: true,
@@ -55,7 +57,7 @@
             };
 
             window.onload = function () {
-                var ctx =  $('#canvas')[0].getContext('2d');
+                var ctx =  $('#q6')[0].getContext('2d');
                 window.myDoughnut = new Chart(ctx, config);
             };
         </script>

@@ -114,13 +114,10 @@
                 item.link = $(this).find('link').eq(0).text();
                 item.description = $(this).find('description').eq(0).text();
                 item.date = $(this).find('pubDate').eq(0).text();
-                item.image=$(this).find('content\\:encoded')[0].innerHTML;
-                var img = $('.size-full').attr('src');
-                $('.news-image').css({
-                    'background-image':'url('+img+')'
-                })
-                $('#news-wrapper').append('<div class="news-block-wrapper"><div class="hidden">'+item.image+'</div><div class="news-block" style="background-color: white"> <div class="news-image"> </div> <div class="news-description">' + item.description + ' </div> <a href="' + item.link + '" class="news-readmore" target="_blank">Ler mais</a> </div></div>');
-              
+                item.image =$(this).find('content\\:encoded')[0].textContent.match(/src="(.*)" alt/)[1]
+                debugger;
+
+                $('#news-wrapper').append('<div class="news-block-wrapper"><div class="hidden">'+item.image+'</div><div class="news-block" style="background-color: white"> <div class="news-image" style="background-image:url('+item.image +')"> </div> <div class="news-description">' + item.description + ' </div> <a href="' + item.link + '" class="news-readmore" target="_blank">Ler mais</a> </div></div>');
                
             });
 
