@@ -157,7 +157,7 @@ $result = mysqli_fetch_assoc($results);
 					O formulário está em constante actualização, os dados são alterados em tempo real, com base nas respostas ao
 					inquérito.
 					<br><br>
-					<b>Até agora, recebemos <span class="text-yellow-light">   <?= $result["numero"] ?>  </span> respostas. Obrigado!</b>
+					<b>Até agora, recebemos <span class="text-yellow-light">	   <?= $result["numero"] ?>  </span> respostas. Obrigado!</b>
 				</p>
 				<div class="flex flex-justify-end">
 					<a href="#section-3" class="btn btn-hover-yellow text-yellow-light">Ver resultados</a>
