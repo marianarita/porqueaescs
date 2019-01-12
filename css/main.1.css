@@ -181,7 +181,7 @@ h3 {
 }
 
 h4 {
-	font-size: 1.5625em;
+	font-size: 1.4em;
 }
 
 p, blockquote {
@@ -266,7 +266,7 @@ dd, dt, li {
 }
 
 .text-small {
-	font-size: 0.5em;
+	font-size: 0.9em;
 }
 
 .uppercase {
@@ -364,15 +364,18 @@ dd, dt, li {
 /*=============================================
 =                  DIV BORDERS                =
 =============================================*/
-
-.line-horizontal-blue, .line-horizontal-red, .line-horizontal-yellow {
+.line-horizontal-blue,
+.line-horizontal-red,
+.line-horizontal-yellow {
 	height: 2px;
 	width: 40%;
 	position: absolute;
 	bottom: 0;
 }
 
-.line-vertical-blue, .line-vertical-red, .line-verical-yellow {
+.line-vertical-blue,
+.line-vertical-red,
+.line-vertical-yellow {
 	height: 70%;
 	width: 2px;
 	position: absolute;
@@ -380,15 +383,18 @@ dd, dt, li {
 	bottom: 15%;
 }
 
-.line-horizontal-blue, .line-vertical-blue {
+.line-horizontal-blue,
+.line-vertical-blue {
 	background-color: var(--blue);
 }
 
-.line-horizontal-red, .line-vertical-red {
+.line-horizontal-red,
+.line-vertical-red {
 	background-color: var(--red);
 }
 
-.line-horizontal-yellow, .line-vertical-yellow {
+.line-horizontal-yellow,
+.line-vertical-yellow {
 	background-color: var(--yellow);
 }
 
@@ -628,57 +634,61 @@ input[type=checkbox] {
 /*=============================================
 =                   SECTIONS                  =
 =============================================*/
-
 #section-1 {
 	transition: none;
-	background: url(../img/escs-bg.png) no-repeat 10% 50%;
 }
 
-#section-2 h1, #section-3 h1, #section-4 h1 {
-	margin: 0.3em 0;
+.section-1-bg {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background: url(../img/escs-bg.png) no-repeat 10% 50%;
+	z-index: -1;
 }
 
 #section-2 p {
 	margin: 2em 0;
 }
 
-#section-3 p, #section-4 p {
+#section-3 h1 {
+	margin-bottom: 0.3em;
+}
+
+#section-2 h1,
+#section-4 h1,
+#section-5 h1 {
+	padding-bottom: 0.3em;
+}
+
+#section-3 p,
+#section-4 p {
 	font-weight: 300;
+}
+
+#section-3 h1,
+#section-4 h1 {
+	font-size: 4.5em;
 }
 
 #section-4 h3 {
 	margin-bottom: 2em;
 }
 
-#section-3 h1 {
-	font-size: 5em;
-}
 
 /*=============================================
 =                 MEDIA QUERIES               =
 =============================================*/
 
-/* --------------- EXCEPTIONS -------------- */
+/* ------------- LARGE DEVICES ------------- */
 
 @media screen and (max-width: 1400px) {
 	h1 {
 		font-size: 5.3em;
 	}
 }
-
-@media screen and (max-width: 1000px) {
-	.navbar a {
-		display: none;
-	}
-	h1 {
-		font-size: 5.1em;
-	}
-	.text-large {
-		font-size: 1.3em;
-	}
-}
-
-/* ------------- LARGE DEVICES ------------- */
 
 @media screen and (max-width: 1200px) {
 	/* Grid system */
@@ -721,6 +731,7 @@ input[type=checkbox] {
 	.col-lg-0 {
 		width: 0;
 	}
+
 	/* Display */
 	.d-lg-block {
 		display: block;
@@ -728,15 +739,37 @@ input[type=checkbox] {
 	.d-lg-none {
 		display: none;
 	}
-	/* Flex */
-	.flex-lg-column {
-		flex-direction: column;
-	}
+
 	/* Type */
-	h1 {}
+	#section-3 h1,
+	#section-4 h1 {
+		font-size: 4em;
+	}
+
 	/* Others */
 	.nav-item {
 		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.navbar a {
+		display: none;
+	}
+	h1 {
+		font-size: 5.1em;
+	}
+	.text-large {
+		font-size: 1.3em;
+	}
+	#section-3 h1 {
+		font-size: 3.5em;
+	}
+	#section-4 h1 {
+		font-size: 3em;
+	}
+	.flex-md-wrap {
+		flex-wrap: nowrap;
 	}
 }
 
@@ -791,28 +824,49 @@ input[type=checkbox] {
 		display: none;
 	}
 	/* Flex */
-	.flex-md-column {
-		flex-direction: column;
+	.flex-md-wrap {
+		flex-wrap: wrap;
 	}
 	/* Navbar */
 	nav {
 		padding: 20px;
 	}
-	/* Home - Section 1 */
-	#section-1 h1 {
-		margin: 0;
-		text-align: center;
+/* Sections */
+	section {
+		padding-left: 0 !important;
 	}
-	#section-1 .text-large {
-		font-size: 1.6em;
-	}
-	#section-1 blockquote {
-		text-align: center;
-	}
-	.section-1-cta {
-		justify-content: center !important;
-		margin-top: 20px;
-	}
+		/* Home - Section 1 */
+			#section-1 h1 {
+				margin: 0;
+				text-align: center;
+			}
+			#section-1 .text-large {
+				font-size: 1.6em;
+			}
+			#section-1 blockquote {
+				text-align: center;
+			}
+			.section-1-cta {
+				justify-content: center !important;
+				margin-top: 20px;
+			}
+		/* Results - Section 3 */
+			#section-3 .slidernav {
+				margin-top: 40px;
+			}
+			.graphs {
+				height: 100%;
+				margin-top: 20px;
+			}
+			#section-3 h2 {
+				margin-top: 20px;
+			}
+		/* Form - Section 4 */
+			#section-4 h4 {
+				margin-top: 60px;
+				padding-top: 20px;
+				border-top: 1px solid white;
+			}
 }
 
 /* ------------- SMALL DEVICES ------------- */
@@ -865,9 +919,15 @@ input[type=checkbox] {
 	.d-sm-none {
 		display: none;
 	}
-	/* Flex */
-	.flex-sm-column {
-		flex-direction: column;
+		/* Type */
+	h1 {
+		font-size: 4em;
+	}
+
+	/* Sections */
+	#section-2, #section-3, #section-4, #section-5 {
+		align-items: initial;
+		padding-top: 116px;
 	}
 }
 
