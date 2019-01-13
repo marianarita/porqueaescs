@@ -756,6 +756,7 @@ $("#switch").change(function () {
         $('.nav-logo').css({
             filter: 'invert(100)'
         })
+        $('.section-1-bg').css({filter: 'invert(100%)'})
     } else {
         changeColor('#ffffff')
         $('h1, h2, h3, h4, h5, h6').css({

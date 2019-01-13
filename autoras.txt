@@ -1,0 +1,11 @@
+/*
+* 
+* PORQUE A ESCS
+* PAGINA DE RESULTADOS // CSS
+* Trabalho para a Cadeira de Laboratorio de Aplicacoes Interativas 
+* Feito por:
+* Edite Fernandes, no 9939 
+* Filipa Ribeiro, no 9987 
+* Mariana Rita, no 9972 
+* 
+*/

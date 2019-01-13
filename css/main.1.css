@@ -462,7 +462,9 @@ input[type=checkbox] {
 }
 
 .navbar-item-active {
-	color: white !important;
+	font-weight: 700;
+	font-size: 1.2em;
+	/* margin: calc(32px - 0.1em) 10px 0px; */
 }
 
 
@@ -776,6 +778,8 @@ input[type=checkbox] {
 /* ------------- MEDIUM DEVICES ------------ */
 
 @media screen and (max-width: 768px) {
+
+
 	/* Grid system */
 	.col-md-1 {
 		width: calc(100% / 12);
@@ -834,7 +838,17 @@ input[type=checkbox] {
 /* Sections */
 	section {
 		padding-left: 0 !important;
+	}	
+
+	#section-2, #section-3, #section-4, #section-5 {
+		align-items: initial;
+		padding-top: 116px;
 	}
+
+	#section-3 h2 {
+		padding-top: 300px;
+	}
+	
 		/* Home - Section 1 */
 			#section-1 h1 {
 				margin: 0;
