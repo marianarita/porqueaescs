@@ -1068,7 +1068,7 @@ a.news-readmore {
 .news-description p {
 	line-height: 1.3em;
 	font-weight: 300;
-	color: black;
+	color: black !important;
 }
 
 .news-description p:last-child {

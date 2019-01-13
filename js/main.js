@@ -757,7 +757,11 @@ $("#switch").change(function () {
             filter: 'invert(100)'
         })
         $('.section-1-bg').css({filter: 'invert(100%)'})
+
+        $('.news-description p').css({color: 'black !important'})
     } else {
+        $('.news-description p').css({color: 'black !important'})
+
         changeColor('#ffffff')
         $('.section-1-bg').css({filter: 'invert(0%)'})
 
