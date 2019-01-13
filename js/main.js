@@ -64,15 +64,15 @@ $(document).ready(function () {
         $('[data-graph="1"]').addClass('current');
         $('[data-graph-nav="1"]').addClass('slidernav-active')
     });
-    //Mexer o logo
-    var factor = 150;
-    $("#section-1").mousemove(function (e) {
-        var width = $(this).innerWidth();
-        var height = $(this).innerHeight();
-        var newX = 10 - (e.pageX - width / 2) / factor;
-        var newY = 50 - (e.pageY - height / 2) / factor;
-        $(this).css('background-position', newX + '%' + ' ' + newY + '%');
-    });
+//Mexer o logo
+var factor = 150;
+$(".section-1-bg").mousemove(function (e) {
+    var width = $(this).innerWidth();
+    var height = $(this).innerHeight();
+    var newX = 10 - (e.pageX - width / 2) / factor;
+    var newY = 50 - (e.pageY - height / 2) / factor;
+    $(this).css('background-position', newX + '%' + ' ' + newY + '%');
+});
     //seguinte
     $("#next").click(function () {
         var graphid = $('.current').next().attr('data-graph');
@@ -759,6 +759,8 @@ $("#switch").change(function () {
         $('.section-1-bg').css({filter: 'invert(100%)'})
     } else {
         changeColor('#ffffff')
+        $('.section-1-bg').css({filter: 'invert(0%)'})
+
         $('h1, h2, h3, h4, h5, h6').css({
             color: 'white'
         })
